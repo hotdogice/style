@@ -1,0 +1,35 @@
+.ui-step-normal li{
+	background: url("http://i02.i.aliimg.com/simg/sprites/app/sprite-step.png") no-repeat scroll 100% 0 #E8E8E8;
+    color: #666666;
+}
+.ui-step-normal li .first {
+    background: url("http://i02.i.aliimg.com/simg/sprites/app/sprite-step.png") no-repeat scroll -12px -100px #E8E8E8;
+}
+.ui-step-normal li.last {
+    background-position: 100% -200px;
+}
+.ui-step-normal li.current {
+    background-color: #1996e6;
+    color: #FFFFFF;
+}
+.ui-step-normal li.current .first {
+    background-color: #1996e6;
+    background-position: -12px -100px;
+}
+.ui-step-normal li.current-prev {
+    background-position: 100% -60px !important;
+}
+.ui-step-normal li.done {
+    background-color: #cceeff;
+    background-position: 100% -80px;
+    color: #666666;
+}
+.ui-step-normal li.done .first {
+    background-color: #cceeff;
+    background-position: -12px -140px;
+}
+.ui-step-normal li.last-current {
+    background-color: #1996e6;
+    background-position: 100% -180px;
+    color: #FFFFFF;
+}

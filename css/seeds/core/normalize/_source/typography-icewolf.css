@@ -1,0 +1,123 @@
+/*
+ *@name : typography-alibaba
+ *@description : alibaba主题的字体定义
+ *@require : 无
+ *@author : zhenyu.zhaozy@alibaba-inc.com
+ *@version : 1.1
+ *@modifyInfo : 
+ *		2012-11-28 :  将 a:visited 声明从全局定义中去除，该定义将交由具体需要使用visited定义的业务场景私有定义;
+ *		
+ *		2012-07-27 : 创建模块, 内部版本;
+ *@structure : 无
+ */
+
+/*
+     =======================================================
+     Text & Anchor
+     =======================================================
+ */
+
+/* TODO : 文本颜色的命名.
+
+ */
+
+
+
+a {
+	color : #06c;
+	text-decoration : none;
+}
+
+/*
+a:visited {
+	color : #969;
+	text-decoration : none;
+}
+*/
+
+/*a:focus, */
+a:hover {
+	color : #f90;
+	text-decoration : underline;
+}
+
+/*
+a:active {
+	
+}
+*/
+
+/* TODO : 设计抽象规则不单一.
+a.emphasize:link {
+	color : #f60;
+}
+
+a.pile:link {
+	color : #333;
+}
+
+a.pile-gray:link {
+	color : #666;
+}
+ */
+
+/*
+     =======================================================
+     English > namespace : .en-us
+     =======================================================
+ */
+
+.en-us {
+	font-size : 12px;
+}
+
+.en-us p {
+	margin : 0 0 15px;
+	font-size : 12px;
+	line-height : 130%;
+}
+
+.en-us .page-title {
+	font-size : 19px;
+	font-weight : normal;
+}
+
+.en-us .content-title {
+	font-size : 16px;
+	font-weight : bold;
+}
+
+.en-us .paragraph-title, 
+.en-us .enlarge {
+	font-size : 14px;
+	font-weight : normal;
+}
+
+.en-us .hint {
+	font-size : 11px;
+	font-family : Tahoma;
+}
+/*
+     =======================================================
+     Chinese > namespace : .zh-cn
+     =======================================================
+ */
+
+.zh-cn {
+	font-size : 12px;
+}
+
+.zh-cn p {
+	margin : 0 0 20px;
+	line-height : 170%;
+}
+
+.zh-cn .page-title {
+	font-size : 16px;
+	font-weight : bold;
+}
+
+.zh-cn .paragraph-title,
+.zh-cn .enlarge {
+	font-size : 14px;
+}

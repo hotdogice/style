@@ -1,0 +1,383 @@
+@media(max-width: 767px) { /* mobile phone */
+	.grid, 
+	.grid-fluid {
+		width :  auto;
+	}
+
+	.col-main, 
+	.col-sub, 
+	.col-extra, 
+	.grid-c2-s5 .main-wrap,
+	.grid-c2-s5 .col-sub,
+	.grid-c2-s6 .main-wrap,
+	.grid-c2-s6 .col-sub, 
+	.grid-c2-e5 .main-wrap,
+	.grid-c2-e5 .col-extra,
+	.grid-c2-e6 .main-wrap,
+	.grid-c2-e6 .col-extra,
+	.grid-c3-s5e6 .main-wrap,
+	.grid-c3-s5e6 .col-sub,
+	.grid-c3-s5e6 .col-extra,
+	.grid-c3-s6e5 .main-wrap,
+	.grid-c3-s6e5 .col-sub,
+	.grid-c3-s6e5 .col-extra,
+
+	.grid-fluid.grid-c2-s5 .main-wrap,
+	.grid-fluid.grid-c2-s5 .col-sub,
+	.grid-fluid.grid-c2-s6 .main-wrap,
+	.grid-fluid.grid-c2-s6 .col-sub, 
+	.grid-fluid.grid-c2-e5 .main-wrap,
+	.grid-fluid.grid-c2-e5 .col-extra,
+	.grid-fluid.grid-c2-e6 .main-wrap,
+	.grid-fluid.grid-c2-e6 .col-extra,
+	.grid-fluid.grid-c3-s5e6 .main-wrap,
+	.grid-fluid.grid-c3-s5e6 .col-sub,
+	.grid-fluid.grid-c3-s5e6 .col-extra,
+	.grid-fluid.grid-c3-s6e5 .main-wrap,
+	.grid-fluid.grid-c3-s6e5 .col-sub,
+	.grid-fluid.grid-c3-s6e5 .col-extra {
+		float : none;
+		display : block;
+		width : auto;
+		margin-left : 0;
+		margin-right : 0;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 989px) { /* pad and narrow screen = 40 * 19 -10 */
+	.grid, 
+	.grid-fluid {
+		width : 750px;
+	}
+
+	.grid-c1 {
+		width : 750px;
+	}
+
+	/*
+	 * two columns grid with col-sub
+	 * 两列布局
+	 */
+
+	.grid-c2-s5 .main-wrap {
+		margin-left : 160px;
+	}
+
+	.grid-c2-s5 .col-sub {
+		width : 150px;
+		margin-left : -100%;
+	}
+
+	.grid-c2-s6 .main-wrap {
+		margin-left : 200px;
+	}
+
+	.grid-c2-s6 .col-sub {
+		width : 190px;
+		margin-left : -100%;
+	}
+
+	/*
+	 * two columns grid with col-extra
+	 * 两列布局
+	 */
+
+	.grid-c2-e5 .main-wrap {
+		margin-right : 160px;
+	}
+
+	.grid-c2-e5 .col-extra {
+		width : 150px;
+		margin-left : -150px;
+	}
+
+	.grid-c2-e6 .main-wrap {
+		margin-right : 200px;
+	}
+
+	.grid-c2-e6 .col-extra {
+		width : 190px;
+		margin-left : -190px;
+	}
+
+	/*
+	 * three columns grid system
+	 * 三列布局
+	 */
+
+	.grid-c3-s5e6 .main-wrap {
+		margin: 0 200px 0 160px;
+	}
+
+	.grid-c3-s5e6 .col-sub {
+		width: 150px;
+		margin-left: -100%;
+	}
+
+	.grid-c3-s5e6 .col-extra {
+		width: 190px;
+		margin-left: -190px;
+	}
+
+	.grid-c3-s6e5 .main-wrap {
+		margin: 0 160px 0 200px;
+	}
+
+	.grid-c3-s6e5 .col-sub {
+		width : 190px;
+		margin-left : -100%;
+	}
+
+	.grid-c3-s6e5 .col-extra {
+		width : 150px;
+		margin-left : -150px;
+	}
+
+	.grid-fluid .grid-c1 {
+		width : 100%;
+	}
+
+	/*
+	 * 流体自适应栅格, 两栏结构 ( with col-sub )
+	 */
+	.grid-fluid.grid-c2-s5 .main-wrap {
+		margin-left : 21.333333%;
+	}
+
+	.grid-fluid.grid-c2-s5 .col-sub {
+		width : 20%;
+		margin-left : -100%;
+	}
+
+	.grid-fluid.grid-c2-s6 .main-wrap {
+		margin-left : 26.666667%;
+	}
+
+	.grid-fluid.grid-c2-s6 .col-sub {
+		width : 25.333333%;
+		margin-left : -100%;
+	}
+
+	/*
+	 * 流体自适应栅格, 两栏结构 ( with col-extra )
+	 */
+
+	.grid-fluid.grid-c2-e5 .main-wrap {
+		margin-right : 21.333333%;
+	}
+
+	.grid-fluid.grid-c2-e5 .col-extra {
+		width : 20%;
+		margin-left : -20%;
+	}
+
+	.grid-fluid.grid-c2-e6 .main-wrap {
+		margin-right : 26.666667%;
+	}
+
+	.grid-fluid.grid-c2-e6 .col-extra {
+		width : 25.333333%;
+		margin-left : -25.333333%;
+	}
+
+	/*
+	 * 流体自适应栅格, 三栏结构
+	 */
+
+	.grid-fluid.grid-c3-s5e6 .main-wrap {
+		margin : 0 26.666667% 0 21.333333%;
+	}
+
+	.grid-fluid.grid-c3-s5e6 .col-sub {
+		width : 20%;
+		margin-left : -100%;
+	}
+
+	.grid-fluid.grid-c3-s5e6 .col-extra {
+		width: 25.333333%;
+		margin-left: -25.333333%;
+	}
+
+	.grid-fluid.grid-c3-s6e5 .main-wrap {
+		margin: 0 21.3333332% 0 26.666667%;
+	}
+
+	.grid-fluid.grid-c3-s6e5 .col-sub {
+		width : 25.333333%;
+		margin-left : -100%;
+	}
+
+	.grid-fluid.grid-c3-s6e5 .col-extra {
+		width : 20%;
+		margin-left : -20%;
+	}
+}
+
+@media (min-width: 1200px) { /* wide screen = 40 * 30 - 10 */
+	.grid, 
+	.grid-fluid {
+		width : 1190px;
+	}
+
+	.grid-c1 {
+		width : 1190px;
+	}
+
+	/*
+	 * two columns grid with col-sub
+	 * 两列布局
+	 */
+
+	.grid-c2-s5 .main-wrap {
+		margin-left : 280px;
+	}
+
+	.grid-c2-s5 .col-sub {
+		width : 270px;
+		margin-left : -100%;
+	}
+
+	.grid-c2-s6 .main-wrap {
+		margin-left : 320px;
+	}
+
+	.grid-c2-s6 .col-sub {
+		width : 310px;
+		margin-left: -100%;
+	}
+
+	/*
+	 * two columns grid with col-extra
+	 * 两列布局
+	 */
+
+	.grid-c2-e5 .main-wrap {
+		margin-right : 280px;
+	}
+
+	.grid-c2-e5 .col-extra {
+		width : 270px;
+		margin-left : -270px;
+	}
+
+	.grid-c2-e6 .main-wrap {
+		margin-right : 320px;
+	}
+
+	.grid-c2-e6 .col-extra {
+		width : 310px;
+		margin-left : -310px;
+	}
+
+	/*
+	 * three columns grid system
+	 * 三列布局
+	 */
+
+	.grid-c3-s5e6 .main-wrap {
+		margin : 0 320px 0 280px;
+	}
+
+	.grid-c3-s5e6 .col-sub {
+		width : 270px;
+		margin-left : -100%;
+	}
+
+	.grid-c3-s5e6 .col-extra {
+		width : 310px;
+		margin-left : -310px;
+	}
+
+	.grid-c3-s6e5 .main-wrap {
+		margin : 0 280px 0 320px;
+	}
+
+	.grid-c3-s6e5 .col-sub {
+		width : 310px;
+		margin-left : -100%;
+	}
+
+	.grid-c3-s6e5 .col-extra {
+		width : 270px;
+		margin-left : -270px;
+	}
+
+	.grid-fluid .grid-c1 {
+		width : 100%;
+	}
+
+	/*
+	 * 流体自适应栅格, 两栏结构 ( with col-sub )
+	 */
+	.grid-fluid.grid-c2-s5 .main-wrap {
+		margin-left : 23.529412%;
+	}
+
+	.grid-fluid.grid-c2-s5 .col-sub {
+		width : 22.689076%;
+		margin-left : -100%;
+	}
+
+	.grid-fluid.grid-c2-s6 .main-wrap {
+		margin-left : 26.890756%;
+	}
+
+	.grid-fluid.grid-c2-s6 .col-sub {
+		width : 26.050420%;
+		margin-left : -100%;
+	}
+
+	/*
+	 * 流体自适应栅格, 两栏结构 ( with col-extra )
+	 */
+
+	.grid-fluid.grid-c2-e5 .main-wrap {
+		margin-right : 23.529412%;
+	}
+
+	.grid-fluid.grid-c2-e5 .col-extra {
+		width : 22.689076%;
+		margin-left : -22.689076%;
+	}
+
+	.grid-fluid.grid-c2-e6 .main-wrap {
+		margin-right : 26.890756%;
+	}
+
+	.grid-fluid.grid-c2-e6 .col-extra {
+		width : 26.050420%;
+		margin-left : -26.050420%;
+	}
+
+	/*
+	 * 流体自适应栅格, 三栏结构
+	 */
+
+	.grid-fluid.grid-c3-s5e6 .main-wrap {
+		margin : 0 26.890756% 0 23.529412%;
+	}
+
+	.grid-fluid.grid-c3-s5e6 .col-sub {
+		width : 22.689076%;
+		margin-left: -100%;
+	}
+
+	.grid-fluid.grid-c3-s5e6 .col-extra {
+		width : 26.050420%;
+		margin-left: -26.050420%;
+	}
+
+	.grid-fluid.grid-c3-s6e5 .main-wrap {
+		margin: 0 23.529412% 0 26.890756%;
+	}
+
+	.grid-fluid.grid-c3-s6e5 .col-sub {
+		width : 26.050420%;
+		margin-left : -100%;
+	}
+
+	.grid-fluid.grid-c3-s6e5 .col-extra {
+		width : 22.689076%;
+		margin-left : -22.689076%;
+	}
+}

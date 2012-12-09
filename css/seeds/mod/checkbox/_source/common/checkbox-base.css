@@ -1,0 +1,39 @@
+/*
+ *@name : checkbox-base
+ *@description : 复选框的视觉样式定义.
+ *@require : core
+ *@author : zhenyu.zhaozy jeffrey.xuj
+ *@version : 1.0
+ *@modifyInfo : 
+ *				2012-09-12 : 修正抽象方式和命名, 正式对外服务版本;
+ *				2012-07-31 : 创建模块, 内部版本;
+ *@structure : 
+ *           <input type="checkbox" class="ui-checkbox ui-checkbox-system" />
+ */
+
+.ui-checkbox {
+	display : inline-block;
+	*display : inline;
+	*zoom : 1;
+}
+
+.ui-checkbox-system {
+	width : auto;
+	height : auto;
+	margin: 0 3px 3px 0;
+	line-height : normal;
+	border : none;
+	background-color : transparent;
+	cursor : pointer;
+}
+
+.ui-checkbox-system:focus {
+	outline : thin dotted #333;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+
+.ui-checkbox.disabled, 
+.ui-checkbox.readonly {
+	
+}

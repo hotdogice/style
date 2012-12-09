@@ -1,0 +1,60 @@
+/*
+ *@name : ui-step
+ *@description : 页码导航的视觉定义.
+ *@require : core
+ *@author : zhenyu.zhaozy@gmail.com
+ *@version : 1.0
+ *@modifyTime : 2012-07-27
+ *@structure : 
+ *		<div class="ui-step"> 
+ *			<ol class="col4">
+ *        		<li class="first current-prev done ">
+ *					<span class="state">Shopping Cart</span>
+ *
+ *				</li>
+ *				<li class="current">
+ *					<span class="state">Confirm Order(s)</span>
+ *			
+ *				</li>
+ *				<li class="">
+ *					<span class="state">Check Out</span>
+ *					
+ *				</li>
+ *         		<li class="last ">
+ *					<span class="state">Complete</span>
+ *				</li>				
+ *        	</ol>
+ *		</div>
+ */
+
+.ui-step {
+    margin: 20px 0;
+    overflow: hidden;
+}
+.ui-step-normal .col3 li {
+    width: 314px;
+}
+.ui-step-normal .col4 li {
+    width: 232px;
+}
+.ui-step-normal .col5 li {
+    width: 183px;
+}
+.ui-step-normal .col6 li {
+    width: 150px;
+}
+.ui-step-normal li {
+    
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    margin-left:0;
+    padding: 0 15px 0 0;
+    text-align: center;
+}
+.ui-step-normal li span, .ui-step-normal li strong {
+    display: block;
+}

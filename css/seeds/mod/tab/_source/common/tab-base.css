@@ -1,0 +1,169 @@
+/*
+ *@name : tab-base
+ *@description : tab页签的视觉定义.
+ *@require : core
+ *@author : zhenyu.zhaozy@gmail.com
+ *@version : 1.0
+ *@modifyTime : 2012-07-27
+ *@structure : 
+ *           <div class="ui-tab ui-tab-normal">
+ *				<div class="ui-tab-content ui-tab-stacked">
+ *           	<ul class="ui-tab-nav">
+ *           		<li class="ui-tab-active">
+ *           			<a href="#">Product Detail</a>
+ *           		</li>
+ *           		<li>
+ *           			<a href="#">section 2</a>
+ *           		</li>
+ *           		<li>
+ *           			<a href="#">section 3</a>
+ *           		</li>
+ *           	</ul>
+ *           	<div class="ui-tab-body">
+ *           		<div class="ui-tab-pane ui-tab-active">
+ *           			Section 1
+ *           		</div>
+ *           		<div class="ui-tab-pane">
+ *           			Section 2
+ *           		</div>
+ *           		<div class="ui-tab-pane">
+ *           			Section 3
+ *           		</div>
+ *           	</div>
+ *           </div>
+ */
+.ui-tab {
+	
+}
+
+.ui-tab-nav {
+	list-style : none;
+	position : relative;
+	margin : 0;
+	padding : 0;
+	
+}
+
+.ui-tab-nav li {
+	margin : 0;
+	padding : 0;
+}
+
+.ui-tab-nav li a {
+	display : block;
+	cursor : pointer;
+	text-decoration : none;
+}
+
+.ui-tab-nav li.ui-tab-active a {
+	cursor : default;
+}
+
+
+.ui-tab-nav li a:hover, 
+.tab-nav li.ui-tab-active a, 
+.tab-nav li.ui-tab-active a:hover {
+	text-decoration : none;
+}
+
+.ui-tab-body {
+	
+}
+
+.ui-tab-body .ui-tab-pane {
+	padding : 10px;
+	display : none;	
+}
+
+.ui-tab-body .ui-tab-active {
+	padding : 10px;
+	display : block;
+}
+
+/*
+ * bounding box - normal,primary
+ */
+ 
+.ui-tab-normal .ui-tab-nav:after,
+.ui-tab-primary .ui-tab-nav:after{
+	content : '\0020';
+	display : block;
+	height : 0;
+	clear : both;
+}
+
+.ui-tab-normal .ui-tab-nav,
+.ui-tab-primary .ui-tab-nav {
+	zoom : 1;
+}
+
+.ui-tab-normal .ui-tab-nav li,
+.ui-tab-primary .ui-tab-nav li {
+	float : left;
+	display : inline;
+	margin-right : 5px;
+	margin-bottom : -1px;
+}
+
+.ui-tab-normal .ui-tab-nav li a ,
+.ui-tab-primary .ui-tab-nav li a {
+	position : relative;
+	
+}
+
+.ui-tab-normal .ui-tab-nav li a:hover,
+.ui-tab-primary .ui-tab-nav li a:hover {
+	
+}
+
+.ui-tab-normal .ui-tab-nav li.ui-tab-active a, 
+.ui-tab-normal .ui-tab-nav li.ui-tab-active a:hover,
+.ui-tab-primary .ui-tab-nav li.ui-tab-active a, 
+.ui-tab-primary .ui-tab-nav li.ui-tab-active a:hover {
+
+}
+
+/*
+ * content box - stacked
+ */
+ 
+.ui-tab-stacked:after {
+	content : '\0020';
+	display : block;
+	height : 0;
+	clear : both;
+}
+
+.ui-tab-stacked {
+	zoom : 1;
+}
+
+.ui-tab-stacked .ui-tab-nav {
+	float : left;
+	display:block;
+}
+
+.ui-tab-stacked .ui-tab-nav li {
+	margin-right:-1px;
+	margin-bottom : -1px;
+}
+
+
+.ui-tab-stacked .ui-tab-nav li a {
+	
+}
+
+.ui-tab-stacked .ui-tab-nav li a:hover {
+	
+}
+
+.ui-tab-stacked .ui-tab-nav li.ui-tab-active a, 
+.ui-tab-stacked .ui-tab-nav li.ui-tab-active a:hover {
+
+}
+
+.ui-tab-stacked .ui-tab-body {
+	overflow:hidden;
+}
+
+ 

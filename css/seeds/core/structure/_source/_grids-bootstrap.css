@@ -1,0 +1,435 @@
+/*
+ * the default seeds grid system utilizes 25 columns, making for a 990px wide container without responsive features enabled,
+ * with the responsive css file added, the grid adapts to be 724px and 1170px wide depending on your viewport, below 767px viewports, the columns become fluid and stack vertically.
+ */
+.row {
+  margin-left : -10px;
+  *zoom : 1;
+}
+.row:before,
+.row:after {
+  display : table;
+  content : "";
+  line-height : 0;
+}
+.row:after {
+  clear : both;
+}
+
+[class*="span"] {
+  float : left;
+  margin-left : 10px;
+  min-height : 1px;
+}
+
+.page {
+  width : 990px;
+}
+
+.page {
+  margin-left: auto;
+  margin-right: auto;
+  *zoom: 1;
+}
+
+.page:before,
+.page:after {
+  display: table;
+  content: "";
+}
+
+.page:after {
+  clear: both;
+}
+
+.span1, 
+.span2, 
+.span3, 
+.span4, 
+.span5, 
+.span6, 
+.span7, 
+.span8, 
+.span9, 
+.span10, 
+.span11, 
+.span12, 
+.span13, 
+.span14, 
+.span15, 
+.span16, 
+.span17, 
+.span18, 
+.span19, 
+.span20, 
+.span21, 
+.span22, 
+.span23, 
+.span24, 
+.span25 {
+  float : left;
+  margin-left : 10px;
+  _display : inline;
+  _zoom : 1;
+}
+
+.span25 {
+  width : 990px;
+}
+
+.span24 {
+  width : 950px;
+}
+
+.span23 {
+  width : 910px;
+}
+
+.span22 {
+  width : 870px;
+}
+
+.span21 {
+  width : 830px;
+}
+
+.span20 {
+  width : 790px;
+}
+
+.span19 {
+  width : 750px;
+}
+
+.span18 {
+  width : 710px;
+}
+
+.span17 {
+  width : 670px;
+}
+
+.span16 {
+  width : 630px;
+}
+
+.span15 {
+  width : 590px;
+}
+
+.span14 {
+  width : 550px;
+}
+
+.span13 {
+  width : 510px;
+}
+
+.span12 {
+  width : 470px;
+}
+
+.span11 {
+  width : 430px;
+}
+
+.span10 {
+  width : 390px;
+}
+
+.span9 {
+  width : 350px;
+}
+
+.span8 {
+  width : 310px;
+}
+
+.span7 {
+  width : 270px;
+}
+
+.span6 {
+  width : 230px;
+}
+
+.span5 {
+  width : 190px;
+}
+
+.span4 {
+  width : 150px;
+}
+
+.span3 {
+  width : 110px;
+}
+
+.span2 {
+  width : 70px;
+}
+
+.span1 {
+  width : 30px;
+}
+
+.offset25 {
+  margin-left : 1010px;
+}
+
+.offset24 {
+  margin-left : 970px;
+}
+
+.offset23 {
+  margin-left : 930px;
+}
+
+.offset22 {
+  margin-left : 890px;
+}
+
+.offset21 {
+  margin-left : 850px;
+}
+
+.offset20 {
+  margin-left : 810px;
+}
+
+.offset19 {
+  margin-left : 770px;
+}
+
+.offset18 {
+  margin-left : 730px;
+}
+
+.offset17 {
+  margin-left : 690px;
+}
+
+.offset16 {
+  margin-left : 650px;
+}
+
+.offset15 {
+  margin-left : 610px;
+}
+
+.offset14 {
+  margin-left : 570px;
+}
+
+.offset13 {
+  margin-left : 530px;
+}
+
+.offset12 {
+  margin-left : 490px;
+}
+
+.offset11 {
+  margin-left : 450px;
+}
+
+.offset10 {
+  margin-left : 410px;
+}
+
+.offset9 {
+  margin-left : 370px;
+}
+
+.offset8 {
+  margin-left : 330px;
+}
+
+.offset7 {
+  margin-left : 290px;
+}
+
+.offset6 {
+  margin-left : 250px;
+}
+
+.offset5 {
+  margin-left : 210px;
+}
+
+.offset4 {
+  margin-left : 170px;
+}
+
+.offset3 {
+  margin-left : 130px;
+}
+
+.offset2 {
+  margin-left : 90px;
+}
+
+.offset1 {
+  margin-left : 50px;
+}
+
+/*
+ * fluid
+ */
+
+.row-fluid {
+  width : 100%;
+  *zoom : 1;
+}
+
+.row-fluid:before,
+.row-fluid:after {
+  display: table;
+  content: "";
+}
+
+.row-fluid:after {
+  clear: both;
+}
+
+.row-fluid > [class*="span"] {
+  float : left;
+  margin-left : 1.0101010101%;
+}
+
+.row-fluid > [class*="span"]:first-child {
+  margin-left : 0;
+}
+
+.row-fluid .span25 {
+  width : 99.9999999979%;
+}
+
+.row-fluid .span24 {
+  width : 95.9595959595%;
+} 
+
+.row-fluid .span23 {
+  width : 91.9191919191%;
+}
+
+.row-fluid .span22 {
+  width : 87.8787878787%;
+}
+
+.row-fluid .span21 {
+  width : 83.8383838383%;
+}
+
+.row-fluid .span20 {
+  width : 79.7979797979%;
+}
+
+.row-fluid .span19 {
+  width : 75.7575757575%;
+}
+
+.row-fluid .span18 {
+  width : 71.7171717171%;
+}
+
+.row-fluid .span17 {
+  width : 67.6767676767%;
+}
+
+.row-fluid .span16 {
+  width : 63.6363636363%;
+}
+
+.row-fluid .span15 {
+  width : 59.5959595959%;
+}
+
+.row-fluid .span14 {
+  width : 55.5555555555%;
+}
+
+.row-fluid .span13 {
+  width : 51.5151515151%;
+}
+
+.row-fluid .span12 {
+  width : 47.4747474747%;
+}
+
+.row-fluid .span11 {
+  width : 43.4343434343%;
+}
+
+.row-fluid .span10 {
+  width : 39.3939393939%;
+}
+
+.row-fluid .span9 {
+  width : 35.3535353535%;
+}
+
+.row-fluid .span8 {
+  width : 31.3131313131%;
+}
+
+.row-fluid .span7 {
+  width : 27.2727272727%;
+}
+
+.row-fluid .span6 {
+  width : 23.2323232323%;
+}
+
+.row-fluid .span5 {
+  width : 19.1919191919%;
+}
+
+.row-fluid .span4 {
+  width : 15.1515151515%;
+}
+
+.row-fluid .span3 {
+  width : 11.1111111111%;
+}
+
+.row-fluid .span2 {
+  width : 7.0707070707%;
+}
+
+.row-fluid .span1 {
+  width : 3.0303030303%;
+}
+
+[class*="span"] > [class*="span"]:first-child {
+  margin-left : 0;
+}
+
+.row-fluid {
+  _margin-left : -10px;
+}
+
+.span-first {
+  margin-left : 0;
+}
+
+.span-width {
+  margin-left : 0;
+  float: none;
+}
+
+.page-fluid {
+  padding-left : 10px;
+  padding-right : 10px;
+  *zoom : 1;
+}
+
+.page-fluid:before,
+.page-fluid:after {
+  display : table;
+  content : "";
+}
+
+.page-fluid:after {
+  clear : both;
+}

@@ -1,0 +1,431 @@
+/*
+ *@name : feedback-base
+ *@description : 信息反馈的视觉定义. 这个模块是bounding box 和 content box 分离的典型实例. bounding box定义模块名和模块状态, content box定义模块类型.
+ *@require : core
+ *@author : jeffrey.xuj, zhenyu.zhaozy 
+ *@version : 1.0
+ *@modifyInfo : 
+ *				2012-09-13 : 稳定抽象方式和与其他mod配合的方式;
+ *@structure : 
+ *           
+ */
+
+/*
+ * # Form 组件的抽象层次
+
+	<ui-form : [ horizontal , vertical , grouping ]>
+		<ui-form-item : [ error , success ]>
+			<ui-form-label>
+			<ui-form-controls>
+				<ui-label : [ block , inline ]>
+					<ui-form-required>
+				(<ui-form-entry>)
+					<ui-textfield>
+					<ui-dropdown>
+					<ui-checkbox>
+					<ui-button>
+					<ui-radio>
+					…
+					<ui-form-help>
+					<ui-feedback>
+				
+ */
+
+/*
+ * bounding box : [state : horizontal, vertical]
+ */
+
+.ui-form {
+
+}
+
+
+.ui-form-horizontal {
+
+}
+
+.ui-form-vertical {
+
+}
+
+.ui-form-horizontal, 
+.ui-form-vertical, 
+.ui-form-grouping {
+	margin : 0 0 18px;
+	padding : 30px 0;
+}
+
+
+/* 
+ * common element of form
+ * 表单通用元素
+ */
+
+/* 表单全局提示信息 */
+.ui-form-global-message {
+	margin-bottom : 10px;
+}
+
+/* 表单组 */
+.ui-form-grouping .ui-form-title {
+	padding : 0;
+}
+
+.ui-form-grouping .ui-form-group { /* fieldset */
+	margin : 0;
+	padding : 0;
+	margin-bottom :  -2px;
+	border : 1px solid #dae6f8;
+}
+
+.ui-form-grouping .ui-form-group-title {
+	background-color: #EBF3FF;
+	border: 0 none;
+	font-size: 12px;
+	font-weight: bold;
+	height: 12px;
+	line-height: 12px;
+	padding: 10px;
+	margin-bottom : 15px;
+}
+
+.ui-form-grouping .ui-form-item {
+	padding : 0 15px;
+}
+
+
+
+.ui-form-title {
+	font-family : Arial;
+	font-weight : bold;
+}
+
+/* 表单标题 */
+h1.ui-form-title {
+	color : #333;
+	font-size : 14px;
+	margin-bottom : 30px;
+	padding : 0 30px;
+}
+
+/* 
+ * item element of form
+ * 表单项 
+ */
+.ui-form-item {
+	margin-bottom : 20px;
+	padding : 0 30px;
+	font-size : 0; /* 解决inline-block额外边距问题 */
+}
+
+.ui-form-item:before {
+	content : '';
+	display : table;
+}
+
+.ui-form-item:after {
+	visibility : hidden;
+	display : block;
+	height : 0;
+	font-size : 0;
+	content : '\0020';
+	clear : both;
+}
+
+.ui-form-item {
+	*zoom : 1;
+}
+
+
+.ui-form-item-error {
+
+}
+
+.ui-form-item-success {
+
+}
+
+.ui-form-item-error .ui-form-label {
+	color : #b94a48;
+}
+
+/*
+ * elements in ui-form-item : ui-form-label, ui-form-controls;
+ * ui-form-item下的直接子元素: ui-form-label, ui-form-controls;
+ */
+
+.ui-form-label {
+	display : block;
+	position : relative;
+
+	font-family: Arial,sans-serif,"Helvetica Neue",Helvetica,宋体;
+	font-size: 12px;
+	font-weight : bold;
+	color : #666;
+}
+
+/* 表单控件组 */
+.ui-form-control {
+	padding-top : 4px;
+	font-size : 0; /* 解决inline-block额外边距问题 */
+}
+
+/* 表单项帮助信息 */
+.ui-form-help {
+	color: #aaa;
+	margin: 0;
+	margin-top: 2px;
+}
+
+/* 表单项 + 表单帮助信息的最小单元 */
+.ui-form-entry {
+	display : inline-block;
+	*display : inline;
+	*zoom : 1;
+	position : relative;
+}
+
+/* 平均分布式表单项单元结构 */
+.ui-form-distribute {
+
+}
+
+.ui-form-distribute li {
+	list-style : none;
+	margin : 0;
+	padding : 0;
+	display : block;
+	float : left;
+	width : 30%;
+}
+
+/*
+ * action field of form
+ * 表单操作区域
+ */
+.ui-form-action {
+	padding: 0 30px 0 30px;
+	*zoom: 1;
+}
+
+.ui-form-action:before,
+.ui-form-action:after {
+	display: table;
+	content: '';
+}
+
+.ui-form-action:after {
+  	visibility : hidden;
+	display : block;
+	height : 0;
+	font-size : 0;
+	content : '\0020';
+	clear : both;
+}
+
+.ui-form-action .ui-button {
+	margin-right : 10px;
+}
+
+
+/*
+ * horizontal
+ */
+
+.ui-form-horizontal .ui-form-label {
+	float : left;
+	padding : 4px 0;
+	padding-right : 10px;
+	width : 200px;
+	height : 18px;
+
+	text-align : right;
+	line-height : 18px;
+}
+
+.ui-form-horizontal .ui-form-label .ui-form-required {
+	color : #f00;
+	font-size : 12px;
+	position : relative;
+	top : 2px;
+}
+
+.ui-form-horizontal .ui-form-action {
+	padding-left : 240px;
+}
+
+.ui-form-horizontal .ui-form-control {
+	zoom : 1;
+	display : block;
+	margin-left : 210px;
+	*margin-left : 0;
+}
+
+/*
+ * vertical
+ */
+
+.ui-form-vertical .ui-form-label {
+	height : 12px;
+	margin-bottom : 5px;
+	line-height : 12px;
+}
+
+.ui-form-vertical .ui-form-label .ui-form-required {
+	color : #f00;
+	font-size : 12px;
+	position : absolute;
+	left : -8px;
+	top : 2px;
+}
+
+/*
+ * grouping
+ */
+
+.ui-form-grouping .ui-form-label {
+	width : 185px;
+}
+
+.ui-form-grouping .ui-form-control {
+	margin-left: 195px;
+}
+
+.ui-form-grouping .ui-form-action {
+	padding-top : 20px;
+	padding-left: 211px;
+}
+
+
+
+/*
+ * 复写表单组合场景下功能单元件的样式
+ */
+
+.ui-form .ui-textfield, 
+.ui-form .ui-dropdown {
+	margin-right : 5px;
+}
+
+/*
+ * <label> 和 表单控件配合使用时, <label for="control-id"><inline id="control-id" /></label>
+ */
+
+.ui-form .ui-label-wrapper {
+	float : none;
+	min-height : 18px;
+	margin-right : 5px;
+	margin-bottom : 0;
+	margin-left : -18px;
+	padding : 0;
+	padding-left : 18px;
+	-padding-left : 15px;
+	color : #000;
+	text-align : left;
+	font-weight : normal;
+	font-size : 12px; /* 解决inline-block问题时将外围容器设置成font-size:0, 各控件需要重置 */
+	width : auto;
+}
+
+.ui-form .ui-filefield {
+	font-size : 12px;
+}
+
+.ui-form .ui-label-separate { /* 预留 */
+
+}
+
+.ui-form .ui-label-block {
+	float : none;
+	width : auto;
+	display : block;
+}
+
+.ui-form .ui-label-inline {
+	float : none;
+	width : auto;
+	display: inline-block;
+	margin-bottom: 0;
+	margin-right: 10px;
+	vertical-align: middle;
+
+	*display : inline;
+	*zoom : 1;
+}
+
+.ui-form-grouping > .ui-box-system {
+	border-top : none;
+}
+
+.ui-form-grouping > .ui-box-system.first-child {
+	border-top : 1px solid #dae6f8;
+}
+
+/*
+ * textfield & dropdown 的长度复写.
+ */
+.ui-form .ui-textfield-system {
+	width : 230px;
+}
+
+.ui-form .ui-dropdown-system {
+	width : 240px;
+}
+
+
+/* 表单控件尺寸管理 */
+.ui-form input.ui-control-xxs, 
+.ui-form textarea.ui-control-xxs {
+	width : 30px;
+}
+.ui-form select.ui-control-xxs {
+	width : 40px;
+}
+
+.ui-form input.ui-control-xs, 
+.ui-form textarea.ui-control-xs {
+	width : 60px;
+}
+.ui-form select.ui-control-xs {
+	width : 70px;
+}
+
+.ui-form input.ui-control-s, 
+.ui-form textarea.ui-control-s {
+	width : 90px;
+}
+.ui-form select.ui-control-s {
+	width : 100px;
+}
+
+.ui-form input.ui-control-m, 
+.ui-form textarea.ui-control-m {
+	width : 150px;
+}
+.ui-form select.ui-control-m {
+	width : 160px;
+}
+
+.ui-form input.ui-control-l, 
+.ui-form textarea.ui-control-l {
+	width : 230px;
+}
+.ui-form select.ui-control-l {
+	width : 240px;
+}
+
+.ui-form input.ui-control-xl, 
+.ui-form textarea.ui-control-xl {
+	width : 310px;
+}
+.ui-form select.ui-control-xl {
+	width : 320px;
+}
+
+.ui-form input.ui-control-xxl, 
+.ui-form textarea.ui-control-xxl {
+	width : 410px;
+}
+.ui-form select.ui-control-xxl {
+	width : 420px;
+}

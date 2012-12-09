@@ -1,0 +1,106 @@
+/*
+ *@name : window-base
+ *@description : tab页签的视觉定义.
+ *@require : core
+ *@author : yanhua.guyh@alibaba-inc.com
+ *@version : 1.0
+ *@modifyTime : 2012-07-27
+ *@structure : 
+ *			<div id="ui-window" class="ui-window ui-window-normal ui-window-transition">
+ *				<a href="javascript:;" class="ui-window-close">closed</a>
+ *				<h3 class="ui-window-title">确认收货</h3>
+ *				<div class="ui-window-bd widthfix">
+ *					<p>您确认已经收到退货了吗？</p>
+ *					<div class="ui-box ui-box-primary ui-box-primary-system">
+ *						<div class="ui-box-content">
+ *							退款总额： <span class="c-yellow fb">US $80.00</span>
+ *						</div>
+ *					</div>
+ *					<p>点击【确认】后，阿里巴巴将会按照退款协议，退款给买家</p>
+ *					<div class="ui-window-btn">
+ *						<input type="button" id="ui-window-confirmbtn" class="ui-button ui-button-primary" value="确认" />
+ *						<input type="button" id="ui-window-cancelbtn" class="ui-button ui-button-normal" value="取消" />
+ *					</div>
+ *				</div>
+ *			</div>
+ */
+
+/*
+* 避免使用id来做命名空间
+* box-shadow 的色值定义使用rgba来实现
+ */
+.ui-window{
+	position:fixed;
+	_position:absolute;
+}
+.ui-window-normal{
+	
+	overflow:hidden;
+}
+/* 这里用id来定义主要是为了避免a被页面上其它css重定义 */
+.ui-window-normal .ui-window-close, .ui-window-normal .ui-window-close:visited {
+	position:absolute;
+	padding-top:17px;
+	height:0;
+	width:17px;
+
+	overflow:hidden;
+}
+/* 这里用class为了下面能复写 */
+.ui-window-close {
+	top:6px;
+	right:6px;
+}
+
+
+.ui-window-title {
+	height:27px;
+	padding-top:10px;
+	margin-bottom:0;
+	text-indent:15px;
+	font:700 16px/26px Arial;
+	color:#333;
+	background:#FFF;
+	
+}
+.ui-window-bd {
+	padding:15px;
+	background:#FFF;
+}
+
+.ui-window-btn {
+	padding-top:10px;
+	margin-bottom:10px;
+}
+.ui-window-btn input {
+	margin:0 5px;
+}
+.ui-window-normal {
+	opacity:0;
+	-moz-transform:scale(1.2);
+	-moz-box-shadow:2px 5px 8px #dddddd;
+	-webkit-box-shadow:2px 5px 8px #dddddd;
+	box-shadow:2px 5px 8px #dddddd;
+}
+.ui-window-transition {
+	opacity:1;
+	-moz-transform:scale(1);
+	-moz-transition:opacity, -moz-transform .15s ease-in-out 0s;
+}
+
+#ui-window-mask {
+	position:fixed;
+	_position:absolute;
+	top:0;
+	left:0;
+	background:#eeeeee;
+}
+.ui-window-normal .widthfix{
+	width:400px;
+}
+.ui-window-normal .heightfix{
+	height:100px;
+	margin: 0 0 0 15px;
+	padding:15px 15px 15px 0;
+	overflow-y:auto;
+}

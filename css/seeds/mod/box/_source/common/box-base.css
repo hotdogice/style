@@ -1,0 +1,234 @@
+/*
+ *@name : box-base
+ *@description : 内容区块的视觉定义.
+ *@require : core
+ *@author : zhenyu.zhaozy@gmail.com
+ *@version : 1.0
+ *@modifyTime : 2012-07-27
+ *@structure : 
+ *           <div class="ui-box ui-box-normal">
+ *           	<h3 class="ui-box-title">
+ *           		Title
+ *           		<span class="ui-box-sub-title">sub title here</span>
+ *           		<a class="action" href="#" >[action]</a>
+ *           	</h3>
+ *           	<div class="ui-box-content">
+ *           		<p class="split">text text text</p>
+ *           		<p>text text text text</p>
+ *           	</div>
+ *           </div>
+ */
+
+.ui-box {
+	position : relative;
+}
+/*
+ * box common stylesheet
+ */
+.ui-box-title {
+	position : relative;
+	margin : 0;
+	overflow : hidden;
+}
+
+.ui-box-title .ui-box-sub-title {
+	margin-left : 11px;
+}
+
+.ui-box-title .action {
+	position : absolute;
+	right : 0;
+	top : 6px;
+	z-index : 2;
+}
+
+.ui-box-body .split {
+	padding-bottom : 8px;
+	margin-bottom : 8px;
+}
+
+.ui-box-body .view-more {
+	
+}
+
+
+.ui-box-title .ui-box-sub-title {
+	font-size : 12px;
+	font-weight : normal;
+	color : #999999;
+}
+
+.ui-box-title .action, 
+.ui-box-title .action:visited {
+	color : #06c;
+	font-size : 12px;
+	font-weight : normal;
+	text-decoration : none;
+}
+
+.ui-box-title .action:hover {
+	text-decoration : underline;
+}
+
+.ui-box-body .split {
+	border-bottom : 1px dotted #cccccc;
+}
+
+.ui-box-body {
+	position : relative;
+}
+
+.ui-box-body .external, 
+.ui-box-body .internal {
+	padding-right : 10px;
+	background : url(http://i02.i.aliimg.com/simg/sprites/app/sprite-viewmore-arrow.png) no-repeat 0 0;
+}
+
+
+.ui-box-body .external, 
+.ui-box-body .external:visited {
+	float : right;
+	color : #06c;
+	text-decoration : none;
+	background-position : 100% -37px;
+}
+
+.ui-box-body .external:hover {
+	color : #f90;
+	text-decoration : underline;
+}
+
+/* debug code */
+
+.ui-box-body .internal, 
+.ui-box-body .internal:visited {
+	float : none;
+	text-decoration : none;
+	color : #333;
+	background-position : 100% 6px;
+}
+
+.ui-box-body .internal:hover {
+	text-decoration : underline;
+	color : #f90;
+}
+
+.ui-box-body .unfold {
+	background-position : 100% -14px;
+}
+
+.ui-box-body .push-button-wrap {
+	float : left;
+	position : relative;
+	left : 50%;
+	top : 15px;
+}
+
+.ui-box-body .push-button-wrap .internal, 
+.ui-box-body .push-button-wrap .internal:visited {
+	position : relative;
+	float : left;
+	right : 50%;
+	padding : 5px 23px 5px 10px;
+	line-height : 12px;
+	margin : 0 auto;
+	border : 1px solid #ddd;
+	border-top : none;
+	background-color : #fff;
+	background-position : 86% 10px;
+	text-align : center;
+	color : #333;
+	text-decoration : none;
+}
+
+.ui-box-body .push-button-wrap .internal:hover {
+	background-color : #f5f5f5;
+	color : #333;
+	text-decoration : none;
+}
+
+.ui-box-body .push-button-wrap .unfold {
+	background-position : 90% -10px;
+}
+
+/*
+ * bounding style
+ */
+.ui-box-primary {
+
+}
+
+.ui-box-primary .ui-box-title {
+	height : 16px;
+	padding : 15px 15px 0 15px;
+
+	font-size : 16px;
+	line-height : 16px;
+	font-weight : bold;
+	color : #333333;
+}
+
+.ui-box-primary .ui-box-body {
+	padding : 15px;
+	line-height : 12px;
+}
+
+/*
+ * normal
+ */
+
+.ui-box-normal {
+	
+}
+
+.ui-box-normal .ui-box-title {
+	height : 16px;
+	padding : 0 0 5px 1px;
+
+	font-size : 16px;
+	line-height : 16px;
+	font-weight : bold;
+	color : #333333;
+}
+
+.ui-box-normal .ui-box-body {
+	padding : 15px 1px 0 1px;
+	line-height : 12px;
+}
+
+/*
+ * system
+ */
+ 
+.ui-box-system {
+
+}
+
+.ui-box-system .ui-box-title {
+
+}
+
+.ui-box-system .ui-box-body {
+	padding : 15px;
+	line-height : 12px;
+}
+
+/*
+ * wrap
+ */
+
+.ui-box-wrap {
+	
+}
+
+.ui-box-wrap .ui-box-title {
+
+}
+
+.ui-box-wrap .ui-box-body{
+	padding : 15px;
+	line-height : 12px;
+}
+
+
+

@@ -1,0 +1,264 @@
+/*
+ *@name : 990 grid
+ *@description : 
+ *             - 栅格系统, 放弃bootstrap方式的流式栅格, 还是进行内容权重可区分的方式进行定义栅格. 其中包括固定的990栅格和流体自适应栅格.
+ *             - 介于目前的结构, 会使用 .classname.classname 定义方式来附着流体自适应的命名空间, 对于不支持该种声明方式的浏览器也会因为全部重写而变相避免问题发生.
+ *             - 不适用于同一页面既存在定宽栅格又存在流体自适应栅格.
+ *             - 仅选用可能出现的布局方式, 放弃大部分不切实际的布局结构, 如有必要再行增加.
+ *             
+ *@require : 无
+ *@author : zhenyu.zhaozy@alibaba-inc.com
+ *@version : 1.1.0
+ *@modifyTime : 2012-11-07
+ *@structure : 无
+ */
+
+/*
+ * seeds默认的栅格系统是构建在990固定宽度上的, 不具备响应式功能的25列栅格系统. 990 = 40 * 25 - 10
+ * seeds的流体自适应栅格的计算基础构建在990比例之上, ?% = {col-width || margin} / 990 * 100
+ */
+
+/*
+ * <div class="grid grid-c2-s4">
+ * 		<div class="col-main">
+ * 			<div class="main-wrap">
+ * 			</div>
+ * 		</div>
+ * 		<div class="col-sub"></div>
+ * 		<div class="col-extra"></div>
+ * </div>
+ *
+ */
+
+/*
+ * namespace : grid;
+ * fixed wide : 990 pixels;
+ */
+
+.grid {
+	width : 990px;
+	margin-left : auto;
+	margin-right : auto;
+}
+
+.grid:before, 
+.grid:after {
+	display : table;
+	content : '';
+	line-height : 0;
+}
+
+.grid:after {
+	clear : both;
+}
+
+.grid {
+	*zoom : 1;
+}
+
+.col-main {
+	float : left;
+	display : inline;
+	width : 100%;
+}
+
+.col-sub, 
+.col-extra {
+	float : left;
+	display : inline;
+}
+
+/*
+ * one column grid
+ * 一列布局
+ */
+
+.grid-c1 {
+	width : 990px;
+}
+
+/*
+ * two columns grid with col-sub
+ * 两列布局
+ */
+
+.grid-c2-s5 .main-wrap {
+	margin-left : 200px;
+}
+
+.grid-c2-s5 .col-sub {
+	width : 190px;
+	margin-left : -100%;
+}
+
+.grid-c2-s6 .main-wrap {
+	margin-left: 240px;
+}
+
+.grid-c2-s6 .col-sub {
+	width: 230px;
+	margin-left: -100%;
+}
+
+/*
+ * two columns grid with col-extra
+ * 两列布局
+ */
+
+.grid-c2-e5 .main-wrap {
+	margin-right: 200px;
+}
+
+.grid-c2-e5 .col-extra {
+	width: 190px;
+	margin-left: -190px;
+}
+
+.grid-c2-e6 .main-wrap {
+	margin-right: 240px;
+}
+
+.grid-c2-e6 .col-extra {
+	width: 230px;
+	margin-left: -230px;
+}
+
+/*
+ * three columns grid system
+ * 三列布局
+ */
+
+.grid-c3-s5e6 .main-wrap {
+	margin: 0 240px 0 200px;
+}
+
+.grid-c3-s5e6 .col-sub {
+	width: 190px;
+	margin-left: -100%;
+}
+
+.grid-c3-s5e6 .col-extra {
+	width: 230px;
+	margin-left: -230px;
+}
+
+.grid-c3-s6e5 .main-wrap {
+	margin: 0 200px 0 240px;
+}
+
+.grid-c3-s6e5 .col-sub {
+	width : 230px;
+	margin-left : -100%;
+}
+
+.grid-c3-s6e5 .col-extra {
+	width : 190px;
+	margin-left : -190px;
+}
+
+/*
+ * fluid grid system
+ */
+.grid-fluid {
+	/*width : 100%;*/
+	width : 990px;
+	margin-left : auto;
+	margin-right : auto;
+}
+
+.grid-fluid:before, 
+.grid-fluid:after {
+	display : table;
+	content : '';
+	line-height : 0;
+}
+
+.grid-fluid:after {
+	clear : both;
+}
+
+.grid-fluid {
+	*zoom : 1;
+}
+
+/*
+ * 流体自适应栅格, 一栏结构
+ */
+.grid-fluid .grid-c1 {
+	width : 100%;
+}
+
+/*
+ * 流体自适应栅格, 两栏结构 ( with col-sub )
+ */
+.grid-fluid.grid-c2-s5 .main-wrap {
+	margin-left : 20.202020%;
+}
+
+.grid-fluid.grid-c2-s5 .col-sub {
+	width : 19.191919%;
+	margin-left : -100%;
+}
+
+.grid-fluid.grid-c2-s6 .main-wrap {
+	margin-left: 24.242424%;
+}
+
+.grid-fluid.grid-c2-s6 .col-sub {
+	width: 23.232323%;
+	margin-left: -100%;
+}
+
+/*
+ * 流体自适应栅格, 两栏结构 ( with col-extra )
+ */
+
+.grid-fluid.grid-c2-e5 .main-wrap {
+	margin-right: 20.202020%;
+}
+
+.grid-fluid.grid-c2-e5 .col-extra {
+	width: 19.191919%;
+	margin-left: -19.191919%;
+}
+
+.grid-fluid.grid-c2-e6 .main-wrap {
+	margin-right: 24.242424%;
+}
+
+.grid-fluid.grid-c2-e6 .col-extra {
+	width: 23.232323%;
+	margin-left: -23.232323%;
+}
+
+/*
+ * 流体自适应栅格, 三栏结构
+ */
+
+.grid-fluid.grid-c3-s5e6 .main-wrap {
+	margin: 0 24.242424% 0 20.202020%;
+}
+
+.grid-fluid.grid-c3-s5e6 .col-sub {
+	width: 19.191919%;
+	margin-left: -100%;
+}
+
+.grid-fluid.grid-c3-s5e6 .col-extra {
+	width: 23.232323%;
+	margin-left: -23.232323%;
+}
+
+.grid-fluid.grid-c3-s6e5 .main-wrap {
+	margin: 0 20.202020% 0 24.242424%;
+}
+
+.grid-fluid.grid-c3-s6e5 .col-sub {
+	width : 23.232323%;
+	margin-left : -100%;
+}
+
+.grid-fluid.grid-c3-s6e5 .col-extra {
+	width : 19.191919%;
+	margin-left : -19.191919%;
+}

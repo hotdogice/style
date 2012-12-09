@@ -1,0 +1,19 @@
+
+.ui-window-normal{
+	border:1px solid #cccccc;
+}
+.ui-window-normal .ui-window-close, .ui-window-normal .ui-window-close:visited {
+	background:url(http://img.alibaba.com/simg/sprites/app/ui-window-close.png) no-repeat 0 -2px;
+}
+
+.ui-window-normal .ui-window-close:hover {
+	background-position:0 -51px;
+}
+
+.ui-window-title h3 {
+
+	background:#f5f5f5;
+}
+.ui-window-btn {
+	text-align:left;
+}

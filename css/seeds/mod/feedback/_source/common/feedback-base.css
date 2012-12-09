@@ -1,0 +1,183 @@
+/*
+ *@name : feedback-base
+ *@description : 信息反馈的视觉定义. 这个模块是bounding box 和 content box 分离的典型实例. bounding box定义模块名和模块状态, content box定义模块类型.
+ *@require : core
+ *@author : zhenyu.zhaozy
+ *@version : 1.1
+ *@modifyInfo : 
+ *				2012-09-13 : 修正抽象方式和命名, 替换新的icon, 正式对外服务版本;
+ *				2012-07-27 : 创建模块, 内部版本;
+ *@structure : 
+ *           <div class="ui-feedback ui-feedback-addon"> bounding box
+ *           	<div class="ui-feedback-content ui-feedback-error"> content box
+ *           		<h3 class="ui-feedback-header">main title here</h3>
+ *           		<div class="ui-feedback-body">
+ *           			<p>content section 1</p>
+ *           			<p>content section 2</p>
+ *           		</div>
+ *           	</div>
+ *           </div>
+ */
+
+/*
+ * bounding box
+ */
+
+.ui-feedback {
+	
+}
+
+.ui-feedback-addon {
+
+}
+
+.ui-feedback-standalone {
+
+}
+
+.ui-feedback-simple {
+
+}
+
+.ui-feedback-standalone .ui-feedback-error, 
+.ui-feedback-standalone .ui-feedback-alert, 
+.ui-feedback-standalone .ui-feedback-success {
+	padding : 10px 10px 10px 56px;
+	background : transparent url(http://i02.i.aliimg.com/simg/sprites/app/sprite-feedback-alone.png) no-repeat 0 0;
+	/* background : transparent url(http://i02.i.aliimg.com/simg/sprites/app/sprite-feedback-standalone.png?v=1.1) no-repeat 0 0; */
+}
+
+.ui-feedback-addon .ui-feedback-error, 
+.ui-feedback-addon .ui-feedback-alert, 
+.ui-feedback-addon .ui-feedback-success {
+	padding : 4px 10px 4px 37px;
+	background : transparent url(http://i02.i.aliimg.com/simg/sprites/app/sprite-feedback-addon.png) no-repeat 0 0;
+	/* background : transparent url(http://i02.i.aliimg.com/simg/sprites/app/sprite-feedback-addon.png?v=1.1) no-repeat 0 0; */
+}
+
+.ui-feedback-simple .ui-feedback-error, 
+.ui-feedback-simple .ui-feedback-alert, 
+.ui-feedback-simple .ui-feedback-success {
+	padding : 10px 10px 10px 56px;
+	background : transparent url(http://i02.i.aliimg.com/simg/sprites/app/sprite-feedback-alone.png) no-repeat 0 0;
+	/* background : transparent url(http://i02.i.aliimg.com/simg/sprites/app/sprite-feedback-standalone.png?v=1.1) no-repeat 0 0; */
+}
+
+
+/*
+ * standalone [state] : error alert success [type];
+ */
+
+.ui-feedback-standalone .ui-feedback-error {
+	border : 1px solid #ffd4d2;
+	background-color : #ffefee;
+	background-position : -95px 0;
+}
+
+.ui-feedback-standalone .ui-feedback-alert {
+	border : 1px solid #fff1d2;
+	background-color : #fffaee;
+	background-position : -52px -41px;
+}
+
+.ui-feedback-standalone .ui-feedback-success {
+	border : 1px solid #ecf5c5;
+	background-color : #f7ffee;
+	background-position : -6px -82px;
+}
+
+.ui-feedback-standalone .ui-feedback-header {
+	margin-bottom : 8px;
+	font-size : 14px;
+	line-height : 20px;
+	font-weight : bold;
+	color : #000;
+}
+
+.ui-feedback-standalone .ui-feedback-body {
+	color: #333;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+/*
+ * addon [state] : error, alert, success [type];
+ */
+
+.ui-feedback-addon .ui-feedback-error {
+	border : 1px solid #ffd4d2;
+	background-color : #ffefee;
+	background-position : -110px 0;
+}
+
+.ui-feedback-addon .ui-feedback-alert {
+	border : 1px solid #fff1d2;
+	background-color : #fffaee;
+	background-position : -67px -41px;
+}
+
+.ui-feedback-addon .ui-feedback-success {
+	border : 1px solid #ecf5c5;
+	background-color : #f7ffee;
+	background-position : -21px -82px;
+}
+
+.ui-feedback-addon .ui-feedback-body{
+	font-size : 12px;
+	color : #333;
+	line-height : 16px;
+}
+
+.ui-feedback-addon .ui-feedback-success.locked {
+	border : 2px solid #e0e9b9;
+}
+
+/*
+ * simple [state] : error, alert, success [type];
+ */
+.ui-feedback-simple .ui-feedback-error {
+	background-position : -95px 0;
+}
+
+.ui-feedback-simple .ui-feedback-alert {
+	background-position : -52px -41px;
+}
+
+.ui-feedback-simple .ui-feedback-success {
+	background-position : -6px -82px;
+}
+
+.ui-feedback-simple .ui-feedback-header {
+	margin-bottom : 8px;
+	font-size : 14px;
+	line-height : 14px;
+	font-weight : bold;
+	color : #000;
+}
+
+.ui-feedback-simple .ui-feedback-body {
+	color: #333;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+/*
+ * 内容区块补充
+ */
+
+
+.ui-feedback-body h4 {
+	font-size : 12px;
+	font-weight : bold;
+	color : #666;
+	line-height : 18px;
+	margin-bottom : 4px;
+}
+
+.ui-feedback-body p {
+	margin-bottom : 14px; /* 20 - [(18-12)/2]*2 */
+}
+
+.ui-feedback-body p:last-child {
+	margin-bottom : 0;
+}

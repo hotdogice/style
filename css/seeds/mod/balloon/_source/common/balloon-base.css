@@ -1,0 +1,271 @@
+/*
+ *@name : balloon-base
+ *@description : 气泡容器的视觉定义. 需要配合JavaScript widget来进行位置计算.
+ *@require : core
+ *@author : zhenyu.zhaozy@gmail.com
+ *@version : 1.0
+ *@modifyTime : 2012-07-27
+ *@structure : 
+ *           <div class="ui-balloon ui-balloon-tl" style="top : {TOP}; right : {RIGHT}; bottom : {BOTTOM}; left : {LEFT};">
+ *           	balloon top left
+ *           	<a class="ui-balloon-arrow"></a>
+ *           </div>
+ */
+
+.ui-balloon {
+	position : absolute;
+}
+
+.ui-balloon .ui-balloon-arrow{
+	position : absolute;
+	display : block;
+	width : 10px;
+	height : 10px;
+	overflow : hidden;
+	
+	/* IE only */
+	width : 15px \9;
+	height : 15px \9;
+}
+
+:root .ui-balloon .ui-balloon-arrow { /* IE9 only */
+	width : 10px;
+	height : 10px;
+}
+
+/*
+ * 
+ */
+.ui-balloon-tl, 
+.ui-balloon-tr, 
+.ui-balloon-rt, 
+.ui-balloon-rb, 
+.ui-balloon-br, 
+.ui-balloon-bl, 
+.ui-balloon-lb, 
+.ui-balloon-lt {
+	padding : 15px;
+
+	border : 1px solid #ccc;
+	background : #fff;
+	
+	/* Progressive Enhancement Box Shadow */
+	-webkit-box-shadow : 3px 3px 4px rgba(0,0,0,0.13);
+    -moz-box-shadow : 3px 3px 4px rgba(0,0,0,0.13);
+    box-shadow : 3px 3px 4px rgba(0,0,0,0.13);
+}
+
+.ui-balloon-tl .ui-balloon-arrow, 
+.ui-balloon-tr .ui-balloon-arrow, 
+.ui-balloon-rt .ui-balloon-arrow, 
+.ui-balloon-rb .ui-balloon-arrow, 
+.ui-balloon-br .ui-balloon-arrow, 
+.ui-balloon-bl .ui-balloon-arrow, 
+.ui-balloon-lb .ui-balloon-arrow, 
+.ui-balloon-lt .ui-balloon-arrow {
+	border : 1px solid #ccc;
+	background : #fff;
+	/* IE only */
+	background : #fff url(http://i02.i.aliimg.com/simg/sprites/app/balloon-arrow-old.png) no-repeat 0 0 \9;
+	
+	-moz-transform: rotate(45deg);
+  	-webkit-transform: rotate(45deg);
+  	-o-transform: rotate(45deg);
+  	-ms-transform: rotate(45deg);
+  	transform: rotate(45deg);
+}
+
+:root .ui-balloon-tl .ui-balloon-arrow, 
+:root .ui-balloon-tr .ui-balloon-arrow, 
+:root .ui-balloon-rt .ui-balloon-arrow, 
+:root .ui-balloon-rb .ui-balloon-arrow, 
+:root .ui-balloon-br .ui-balloon-arrow, 
+:root .ui-balloon-bl .ui-balloon-arrow, 
+:root .ui-balloon-lb .ui-balloon-arrow, 
+:root .ui-balloon-lt .ui-balloon-arrow { /* IE9 only */
+	background : #fff\9; 
+} 
+
+.ui-balloon-tl .ui-balloon-arrow {
+	left : 10px;
+	top : -6px;
+	border-right : none;
+	border-bottom : none;
+	/* IE only */
+	top : -7px \9;
+	height : 7px \9; 
+	border : none \9;
+	background-position : 0 0 \9;
+}
+
+:root .ui-balloon-tl .ui-balloon-arrow { /* IE9 only */
+	top : -6px;
+	height : 10px; 
+	border : 1px solid #ccc;
+	border-right : none;
+	border-bottom : none;
+	background : #fff;
+}
+
+.ui-balloon-tr .ui-balloon-arrow {
+	right : 10px;
+	top : -6px;
+	border-right : none;
+	border-bottom : none;
+	/* IE only */
+	top : -7px \9;
+	height : 7px \9; 
+	border : none \9;
+	background-position : 0 0 \9;
+}
+
+:root .ui-balloon-tr .ui-balloon-arrow { /* IE9 only */
+	top : -6px;
+	height : 10px;
+	border : 1px solid #ccc;
+	border-right : none;
+	border-bottom : none;
+	background : #fff;
+}
+
+.ui-balloon-rt .ui-balloon-arrow {
+	right : -6px;
+	top : 10px;
+	border-bottom : none;
+	border-left : none;
+	-webkit-box-shadow : 3px -1px 3px rgba(0,0,0,0.13);
+    -moz-box-shadow : 3px -1px 3px rgba(0,0,0,0.13);
+    box-shadow : 3px -1px 3px rgba(0,0,0,0.13);
+    /* IE only */
+    right : -7px \9;
+	width : 7px \9; 
+	border : none \9;
+	background-position : 100% 0 \9;
+}
+
+:root .ui-balloon-rt .ui-balloon-arrow { /* IE9 only */
+	right : -6px;
+	width : 10px;
+	border : 1px solid #ccc;
+	border-left : none;
+	border-bottom : none;
+	background : #fff;
+}
+
+.ui-balloon-rb .ui-balloon-arrow {
+	right : -6px;
+	bottom : 10px;
+	border-bottom : none;
+	border-left : none;
+	-webkit-box-shadow : 3px -1px 3px rgba(0,0,0,0.13);
+    -moz-box-shadow : 3px -1px 3px rgba(0,0,0,0.13);
+    box-shadow : 3px -1px 3px rgba(0,0,0,0.13);
+    /* IE only */
+    right : -7px \9;
+    _right : -8px;
+	width : 7px \9; 
+	border : none \9;
+	background-position : 100% 0 \9;
+}
+
+:root .ui-balloon-rb .ui-balloon-arrow { /* IE9 only */
+	right : -6px;
+	width : 10px;
+	border : 1px solid #ccc;
+	border-left : none;
+	border-bottom : none;
+	background : #fff;
+}
+
+.ui-balloon-br .ui-balloon-arrow {
+	right : 10px;
+	bottom : -6px;
+	border-left : none;
+	border-top : none;
+	-webkit-box-shadow : 4px 1px 3px rgba(0,0,0,0.09);
+    -moz-box-shadow : 4px 1px 3px rgba(0,0,0,0.09);
+    box-shadow : 4px 1px 3px rgba(0,0,0,0.09);
+    /* IE only */
+    bottom : -7px \9;
+	height : 7px \9; 
+	_bottom : -8px;
+	border : none \9;
+	background-position : 0 -8px \9;
+
+}
+
+:root .ui-balloon-br .ui-balloon-arrow { /* IE9 only */
+	bottom : -6px;
+	height : 10px;
+	border : 1px solid #ccc;
+	border-left : none;
+	border-top : none;
+	background : #fff;
+}
+
+.ui-balloon-bl .ui-balloon-arrow {
+	left : 10px;
+	bottom : -6px;
+	border-left : none;
+	border-top : none;
+	-webkit-box-shadow : 4px 1px 3px rgba(0,0,0,0.09);
+    -moz-box-shadow : 4px 1px 3px rgba(0,0,0,0.09);
+    box-shadow : 4px 1px 3px rgba(0,0,0,0.09);
+    /* IE only */
+	bottom : -7px \9;
+	height : 7px \9; 
+	_bottom : -8px;
+	border : none \9;
+	background-position : 0 -8px \9;
+}
+
+:root .ui-balloon-bl .ui-balloon-arrow { /* IE9 only */
+	bottom : -6px;
+	height : 10px;
+	border : 1px solid #ccc;
+	border-left : none;
+	border-top : none;
+	background : #fff;
+}
+
+.ui-balloon-lb .ui-balloon-arrow {
+	left : -6px;
+	bottom : 10px;
+	border-top : none;
+	border-right : none;
+	/* IE only */
+	left : -7px \9;
+	width : 7px \9; 
+	border : none \9;
+	background-position : 0 0 \9;
+}
+
+:root .ui-balloon-lb .ui-balloon-arrow  { /* IE9 only */
+	left : -6px;
+	width : 10px;
+	border : 1px solid #ccc;
+	border-top : none;
+	border-right : none;
+	background : #fff;
+}
+
+.ui-balloon-lt .ui-balloon-arrow {
+	left : -6px;
+	top : 10px;
+	border-top : none;
+	border-right : none;
+	/* IE only */
+	left : -7px \9;
+	width : 7px \9; 
+	border : none \9;
+	background-position : 0 0 \9;
+}
+
+:root .ui-balloon-lt .ui-balloon-arrow  { /* IE9 only */
+	left : -6px;
+	width : 10px;
+	border : 1px solid #ccc;
+	border-top : none;
+	border-right : none;
+	background : #fff;
+}

@@ -1,0 +1,6 @@
+.ui-step{margin:20px 0;overflow:hidden}.ui-step-normal .col3 li{width:314px}.ui-step-normal .col4 li{width:232px}.ui-step-normal .col5 li{width:183px}.ui-step-normal .col6 li{width:150px}.ui-step-normal li{float:left;font-size:12px;font-weight:bold;height:20px;line-height:20px;overflow:hidden;margin-left:0;padding:0 15px 0 0;text-align:center}.ui-step-normal li span,.ui-step-normal li strong{display:block}
+
+.ui-step-normal li{background:url("http://i02.i.aliimg.com/simg/sprites/app/sprite-step.png") no-repeat scroll 100% 0 #e8e8e8;color:#666}.ui-step-normal li .first{background:url("http://i02.i.aliimg.com/simg/sprites/app/sprite-step.png") no-repeat scroll -12px -100px #e8e8e8}.ui-step-normal li.last{background-position:100% -200px}.ui-step-normal li.current{background-color:#f90;color:#fff}.ui-step-normal li.current .first{background-color:#f90;background-position:-12px -100px}.ui-step-normal li.current-prev{background-position:100% -20px!important}.ui-step-normal li.done{background-color:#ffe8bb;background-position:100% -40px;color:#666}.ui-step-normal li.done .first{background-color:#ffe8bb;background-position:-12px -140px}.ui-step-normal li.last-current{background-color:#f90;background-position:100% -180px;color:#fff}
+
+
+

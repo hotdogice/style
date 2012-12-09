@@ -1,0 +1,46 @@
+/*
+ *@name : layouts
+ *@description : 基础网站结构模块的定义.
+ *@require : 无
+ *@author : zhenyu.zhaozy@alibaba-inc.com
+ *@version : 1.0
+ *@modifyTime : 2012-07-27
+ *@structure : 无
+ */
+
+.header {
+	
+}
+
+.page {
+	width : 990px;
+	margin : 0 auto;
+}
+
+.col-main {
+	float : left;
+	width : 100%;
+}
+
+.col-sub, .col-extra {
+	float : left;
+}
+
+.footer {
+	
+}
+
+.main-wrap:after, 
+.col-sub:after, 
+.col-extra:after {
+	content: '\0020';
+	display: block;
+	height: 0;
+	clear: both;
+}
+
+.main-wrap,
+.col-sub,
+.col-extra {
+	zoom: 1;
+}

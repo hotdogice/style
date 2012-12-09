@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Form @ Seeds</title>
+	<link rel="stylesheet" href="../../../../../core/core.css" media="screen" />
+	<link rel="stylesheet" href="../../../box/box-alibaba.css" media="screen" />
+	<link rel="stylesheet" href="../../../feedback/feedback-alibaba.css" media="screen" />
+	<link rel="stylesheet" href="../../../button/button-alibaba.css" media="screen" />
+	<link rel="stylesheet" href="../../../dropdown/dropdown-alibaba.css" media="screen" />
+	<link rel="stylesheet" href="../../../radio/radio-alibaba.css" media="screen" />
+	<link rel="stylesheet" href="../../../checkbox/checkbox-alibaba.css" media="screen" />
+	<link rel="stylesheet" href="../../../textfield/textfield-alibaba.css" media="screen" />
+	<link rel="stylesheet" href="../../_source/common/form-base.css" media="screen" />
+	
+<style>
+
+.page { 
+	width : 95%;
+	margin : 0 auto 10px;
+}
+
+.main-wrap {
+	/*background : #dedede;*/
+}
+
+.col-sub {
+	background-color: #fff;
+}
+
+/* only for demo */
+.ui-form {
+	/*border: 1px solid #cccccc;*/
+	background: white;
+}
+
+.col-sub h2 {
+	margin:0;
+	padding: 20px;
+}
+
+.docs-input-sizes select, .docs-input-sizes input {
+	display: block;
+	margin-bottom: 9px;
+}
+
+body {
+
+}
+
+article {	
+	padding: 0 20px;
+	padding-bottom: 20px;
+}
+
+.ui-form-grouping > .ui-box-system:first-child {
+	color : red;
+	font-weight:bold;
+	font-size : 5em;
+ } 
+</style>
+
+<script> 
+	/* Enable IE to support HTML5 Tags */
+   (function() {
+     if (!/*@cc_on!@*/0) return;
+     var e = "abbr, article, aside, audio, m, sup, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');
+     var i= e.length;
+     while (i--){
+         document.createElement(e[i])
+     } 
+	})(); 
+</script>
+
+</head>
+<body>
+
+
+<div class="page">
+
+<h1>Form Developer Suite - CSS Modules</h1>
+
+<p>按照最新的UED表单视觉规范制作，传送门：<a href="http://dpl.aliui.com/?cat=31" target="_blank">http://dpl.aliui.com/?cat=31</a></p>
+<p>使用中发现任何问题，请向 jeffrey.xuj@alibaba-inc.com 或者 zhenyu.zhaozy@alibaba-inc.com 吐槽</p>
+
+<!-- { basic form exampe -->
+<div class="grid-c2-s6">
+
+	<div class="col-main">
+
+		<div class="main-wrap">
+			
+			<div class="util-left" style="width:36%;padding-right:1%">
+
+				<form class="ui-form ui-form-vertical">
+						
+					<h1 class="ui-form-title">Example 1: Basic Form Example</h1>
+
+					<div class="ui-form-item">
+						<label class="ui-form-label" for="username">
+							<m class="ui-form-required">*</m>
+							Username :
+						</label>
+						<input id="username" type="text" class="ui-textfield ui-textfield-system" placeholder="Please input your username" />
+					</div>
+
+					<div class="ui-form-item">
+						<label class="ui-form-label" for="birthday">
+							Year of birth:
+						</label>
+						<select class="ui-dropdown ui-dropdown-system" id="birthday">
+							<option value="">Please select</option>
+							<option>1980</option>
+							<option>1981</option>
+							<option>1982</option>
+							<option>1983</option>
+						</select>
+					</div>
+					
+					<div class="ui-form-item">
+						<label class="ui-form-label" for="bio">Bio:</label>
+						<textarea class="ui-textfield ui-textfield-system multiple" id="bio" rows="5"></textarea>
+					</div>
+
+					<div class="ui-form-item">
+						<label class="ui-form-label" for="sex">Sex:</label>
+						<div class="ui-form-control">
+							<label class="ui-label ui-label-wrapper ui-label-block">
+								<input class="ui-radio ui-radio-system" type="radio" name="sex" />Male
+							</label>
+							<label class="ui-label ui-label-wrapper ui-label-block">
+								<input class="ui-radio ui-radio-system" type="radio" name="sex" />Female
+							</label>
+						</div>
+					</div>
+
+					<div class="ui-form-item">
+						<div class="ui-form-control">
+							<label class="ui-label ui-label-wrapper first">
+								<input class="ui-checkbox ui-checkbox-system" type="checkbox" />
+								I Accept your <a href="#">Terms</a></label>
+							</label>
+						</div>
+					</div>
+
+					<div class="ui-form-action">
+						<!-- Attention: Do not use input[type="submit"] as submit button -->
+						<button type="submit" class="ui-button ui-button-primary ui-button-medium">Save Changes</button>
+						<button class="ui-button ui-button-normal ui-button-medium">Cancel</button>
+					</div>
+
+				</form>
+
+			</div>
+
+			<div class="util-right" style="width:62%;padding-left:1%;">
+
+				<form class="ui-form ui-form-horizontal">
+					<h1 class="ui-form-title">Example 2: Basic Inline Form</h1>
+					<div class="ui-form-item">
+
+						<input type="text" placeholder="Email" class="ui-textfield ui-textfield-system ui-control-m" />
+
+						<input type="password" placeholder="password" class="ui-textfield ui-textfield-system ui-control-m" />
+
+						<label class="ui-label ui-label-wrapper ui-label-inline">
+							<input class="ui-checkbox ui-checkbox-system" type="checkbox" /> 
+							Remember Me
+						</label>
+
+						<button type="submit" class="ui-button ui-button-primary ui-button-medium">Sign In</button>
+					</div>
+				</form>
+
+				<!-- form horizontal -->
+				<form class="ui-form ui-form-horizontal">
+
+					<h1 class="ui-form-title">Example 3: Horizontal Forms</h1>
+
+					<div class="ui-form-item">
+						<label class="ui-form-label" for="form3-username">
+							<m class="ui-form-required">*</m>
+							Username :
+						</label>
+						<input class="ui-textfield ui-textfield-system" id="form3-username" type="text" />
+					</div>
+
+					<div class="ui-form-item">
+						<label class="ui-form-label" for="form3-birthday">
+							Year of birth :
+						</label>
+						<select class="ui-dropdown ui-dropdown-system" id="form3-birthday">
+							<option value="">Please select</option>
+							<option>1980</option>
+							<option>1981</option>
+							<option>1982</option>
+							<option>1983</option>
+						</select>
+					</div>
+					
+					<div class="ui-form-item">
+						<label class="ui-form-label" for="form3-bio">
+							Bio :
+						</label>
+						<textarea class="ui-textfield ui-textfield-system multiple" id="form3-bio" rows="5"></textarea>
+					</div>
+
+					<div class="ui-form-item">
+						<label class="ui-form-label" for="sex">
+							Sex :
+						</label>
+						<div class="ui-form-control">
+							<label class="ui-label ui-label-wrapper ui-label-block">
+								<input class="ui-radio ui-radio-system" type="radio" name="sex" />
+								Male
+							</label>
+							<label class="ui-label ui-label-wrapper ui-label-block">
+								<input class="ui-radio ui-radio-system" type="radio" name="sex" />
+								Female
+							</label>
+						</div>
+					</div>
+
+					<div class="ui-form-item">
+						<label class="ui-form-label">
+						</label>
+						<div class="ui-form-control">
+							<label class="ui-label ui-label-wrapper">
+								<input class="ui-checkbox ui-checkbox-system" type="checkbox" /> 
+								I Accept your <a href="#">Terms</a>
+							</label>
+						</div>
+					</div>
+
+					<div class="ui-form-action">
+						<!-- Attention: Do not use input[type="submit"] as submit button -->
+						<button type="submit" class="ui-button ui-button-primary ui-button-medium">Save Changes</button>
+						<button class="ui-button ui-button-normal ui-button-medium">Cancel</button>
+					</div>
+
+				</form>
+
+				
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="col-sub">
+		<h2>基础表单示例</h2>
+		<article>
+			<p>这里展示了表单的基本用法，输入框是默认宽度，本部分有三个示例，分别演示了三种基本布局结构</p>
+			<p>Example 1是默认的布局，上下结构 - Label在上，输入框在下</p>
+			<p>Example 2是当行布局，适用于表单简单，对空间要求紧凑的场景</p>
+			<p>Example 3是左右布局，适用于表单比较长，通常布局比较复杂的场景</p>
+		</article>
+	</div>
+</div>
+<!-- basic form example } -->
+
+<!-- { advanced form example -->
+<div class="grid-c2-s6">
+
+	<div class="col-main">
+
+		<div class="main-wrap">
+			
+			<form class="ui-form ui-form-horizontal ui-form-grouping">
+
+				<h1 class="ui-form-title">Example 4: Advanced Forms</h1>
+
+				<div class="ui-form-global-message ui-feedback ui-feedback-standalone">
+					<div class="ui-feedback-content ui-feedback-alert">
+						<h3 class="ui-feedback-header">Global Alert Message</h3>
+						<div class="ui-feedback-body">
+							<p>Sample global alert message 1</p>
+							<p>Sample global alert message 2</p>
+						</div>
+					</div>
+				</div>
+
+				<fieldset class="ui-form-group">
+					<h3 class="ui-form-group-title">Basic fields</h3>
+
+					<div class="ui-form-item ui-form-item-error">
+						<label class="ui-form-label" for="">
+							Text Input : 
+						</label>
+						<div class="ui-form-control">
+							<input class="ui-textfield ui-textfield-system ui-textfield-error" type="text" />
+							<button class="ui-button ui-button-normal ui-button-medium">Button</button>
+							<div class="ui-form-help ui-feedback ui-feedback-addon">
+								<div class="ui-feedback-content ui-feedback-error ui-feedback-body">
+									Invalid last name
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="ui-form-item ui-form-item-error">
+						<label class="ui-form-label" for="birthday">
+							Select input : 
+						</label>
+						<div class="ui-form-control">
+							<select id="birthday" class="ui-dropdown ui-dropdown-system ui-dropdown-error">
+								<option value="">Please select</option>
+								<option>1980</option>
+								<option>1981</option>
+								<option>1982</option>
+								<option>1983</option>
+							</select>
+							<div class="ui-form-help ui-feedback ui-feedback-addon">
+								<div class="ui-feedback-content ui-feedback-error ui-feedback-body">
+									Please select your year of birth
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="ui-form-item">
+						<label class="ui-form-label" for="birthday">
+							Multicon-select : 
+						</label>
+						<div class="ui-form-control">
+							<select id="multiSelect" multiple="multiple" class="ui-dropdown ui-dropdown-system multiple ui-dropdown-error">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+							<div class="ui-form-help ui-feedback ui-feedback-addon">
+								<div class="ui-feedback-content ui-feedback-error ui-feedback-body">
+									Please select your year of birth
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="ui-form-item">
+						<label class="ui-form-label">
+							File select :
+						</label>
+						<div class="ui-form-control">
+							<input type="file" class="ui-filefield" />
+							<div class="ui-form-help"><em>5MB</em> Max</div>
+						</div>
+					</div>
+
+					<div class="ui-form-item">
+						<label class="ui-form-label" for="bio">
+							Textarea : 
+						</label>
+						<div class="ui-form-control">
+							<textarea class="ui-textfield ui-textfield-system multiple" id="bio" rows="5"></textarea>
+							
+						</div>
+					</div>
+				</fieldset>
+
+				<fieldset class="ui-form-group">
+					<h2 class="ui-form-group-title">Complex Nested Layout</h2>
+					
+					<div class="ui-form-item">
+						<label class="ui-form-label">
+							<m class="ui-form-required">*</m>
+							Label name :
+						</label>
+						<input type="text" class="ui-textfield ui-textfield-system" />
+						<select class="ui-dropdown ui-dropdown-system ui-control-m">
+							<option>something</option>
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select>
+						<button class="ui-button ui-button-normal ui-button-medium">Button</button>
+					</div>
+
+					<div class="ui-form-item ui-form-item-error">
+						<label class="ui-form-label">
+							Phone Number :
+						</label>			
+						<div class="ui-form-control">
+							<div class="ui-form-entry">
+								<input type="text" class="ui-textfield ui-textfield-system ui-control-xxs" />
+								<p class="ui-form-help">86</p>
+							</div>
+
+							<div class="ui-form-entry">
+								<input type="text" class="ui-textfield ui-textfield-system ui-textfield-error ui-control-xs" value="abc" />
+								<p class="ui-form-help">571</p>
+							</div>
+
+							<div class="ui-form-entry">
+								<input type="text" class="ui-textfield ui-textfield-system ui-control-s" />
+								<p class="ui-form-help">12345678</p>
+							</div>
+
+							<div class="ui-form-help ui-feedback ui-feedback-addon">
+								<div class="ui-feedback-content ui-feedback-error ui-feedback-body">区号格式不正确</div>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+				
+				<fieldset class="ui-form-group">
+					<h3 class="ui-form-group-title">Radio &amp; Checkbox</h3>
+					<div class="ui-form-item">
+						<label class="ui-form-label">
+							Radio : 
+						</label>
+						
+						<div class="ui-form-control">
+							<label class="ui-label ui-label-wrapper ui-label-block">
+								<input type="radio" name="radio" class="ui-radio ui-radio-system" />
+								Radio 1
+							</label>
+
+							<label class="ui-label ui-label-wrapper ui-label-block">
+								<input type="radio" name="radio" class="ui-radio ui-radio-system" />
+								Radio 2
+							</label>
+
+							<div class="ui-form-help ui-feedback ui-feedback-addon ui-control-xl">
+								<div class="ui-feedback-content ui-feedback-error ui-feedback-body">content section 1</div>
+							</div>
+						</div>
+						
+					</div>
+
+					<div class="ui-form-item">
+						<label class="ui-form-label">
+							Checkbox : 
+						</label>
+						
+						<div class="ui-form-control">
+							<label class="ui-label ui-label-wrapper ui-label-block">
+								<input type="checkbox" name="checkbox" class="ui-checkbox ui-checkbox-system" />
+								Checkbox 1
+							</label>
+							
+							<label class="ui-label ui-label-wrapper ui-label-block">
+								<input type="checkbox" name="checkbox" class="ui-checkbox ui-checkbox-system" />
+								Checkbox 2
+							</label>
+						</div>
+
+					</div>
+
+					<div class="ui-form-item">
+						<label class="ui-form-label">
+							Inline radio :
+						</label>
+						
+						<div class="ui-form-control">
+							<label class="ui-label ui-label-wrapper ui-label-inline">
+								<input type="radio" name="inline-radio" class="ui-radio ui-radio-system" />
+								Radio 1
+							</label>
+							
+							<label class="ui-label ui-label-wrapper ui-label-inline">
+								<input type="radio" name="inline-radio" class="ui-radio ui-radio-system" />
+								Radio 2
+							</label>
+						</div>
+
+					</div>
+
+					<div class="ui-form-item">
+						<label class="ui-form-label">
+							Inline checkbox : 
+						</label>
+						
+						<div class="ui-form-control">
+							<label class="ui-label ui-label-wrapper ui-label-inline">
+								<input type="checkbox" name="inline-checkbox" class="ui-checkbox ui-checkbox-system" />
+								Checkbox 1
+							</label>
+							
+							<label class="ui-label ui-label-wrapper ui-label-inline">
+								<input type="checkbox" name="inline-checkbox" class="ui-checkbox ui-checkbox-system" />
+								Checkbox 2
+							</label>
+						</div>
+
+					</div>
+
+					<div class="ui-form-item">
+						<label class="ui-form-label">
+							Average Distribution input items : 
+						</label>
+
+						<div class="ui-form-control">
+							
+							<ul class="ui-form-distribute clearfix">
+								<li>
+									<label class="ui-label ui-label-wrapper ui-label-inline">
+										<input type="checkbox" name="inline-checkbox" class="ui-checkbox ui-checkbox-system" />Checkbox 1
+									</label>
+								</li>
+								<li>
+									<label class="ui-label ui-label-wrapper ui-label-inline">
+										<input type="checkbox" name="inline-checkbox" class="ui-checkbox ui-checkbox-system" />Checkbox 2
+									</label>
+								</li>
+								<li class="col3">
+									<label class="ui-label ui-label-wrapper ui-label-inline">
+										<input type="checkbox" name="inline-checkbox" class="ui-checkbox ui-checkbox-system" />Checkbox 3
+									</label>
+								</li>
+								<li>
+									<label class="ui-label ui-label-wrapper ui-label-inline">
+										<input type="checkbox" name="inline-checkbox" class="ui-checkbox ui-checkbox-system" />Checkbox 4
+									</label>
+								</li>
+								<li>
+									<label class="ui-label ui-label-wrapper ui-label-inline">
+										<input type="checkbox" name="inline-checkbox" class="ui-checkbox ui-checkbox-system" />Checkbox 5
+									</label>
+								</li>
+							</ul>
+
+							<p class="ui-form-help">平均排列的布局非常适用于大量的单选/复选框，有2等分，3等分，4等分，5等分的样式可供使用</p>
+							
+						</div>
+
+					</div>
+				</fieldset>
+
+				<fieldset class="ui-form-group">
+					<h3 class="ui-form-group-title">Form controls size grid</h3>
+					<div class="ui-form-item">
+						<label class="ui-form-label">Size</label>
+						<div class="ui-form-control docs-input-sizes">
+							<input type="text" class="ui-textfield ui-textfield-system ui-control-xxs" placeholder="xxs">
+							<select class="ui-dropdown ui-dropdown-system ui-control-xxs" placeholder="xxs"></select>
+							<input type="text" class="ui-textfield ui-textfield-system ui-control-xs" placeholder="xs">
+							<select class="ui-dropdown ui-dropdown-system ui-control-xs" placeholder="xs"></select>
+							<input type="text" class="ui-textfield ui-textfield-system ui-control-s" placeholder="s">
+							<select class="ui-dropdown ui-dropdown-system ui-control-s" placeholder="s"></select>
+							<input type="text" class="ui-textfield ui-textfield-system ui-control-m" placeholder="m">
+							<select class="ui-dropdown ui-dropdown-system ui-control-m" placeholder="m"></select>
+							<input type="text" class="ui-textfield ui-textfield-system ui-control-l" placeholder="l">
+							<select class="ui-dropdown ui-dropdown-system ui-control-l" placeholder="l"></select>
+							<input type="text" class="ui-textfield ui-textfield-system ui-control-xl" placeholder="xl">
+							<select class="ui-dropdown ui-dropdown-system ui-control-xl" placeholder="xl"></select>
+							<input type="text" class="ui-textfield ui-textfield-system ui-control-xxl" placeholder="xxl">
+							<select class="ui-dropdown ui-dropdown-system ui-control-xxl" placeholder="xxl"></select>
+						</div>
+					</div>
+
+				</fieldset>
+
+				<fieldset class="ui-form-group">
+					<h3 class="ui-form-group-title">Form control states</h3>
+
+					<div class="ui-form-item">
+						<label class="ui-form-label" for="">
+							Disable Input : 
+						</label>
+						<div class="ui-form-control">
+							<input type="text" disabled="disabled" class="ui-textfield ui-textfield-system disabled" />
+						</div>
+					</div>
+
+					<div class="ui-form-item ui-form-item-success">
+						<label class="ui-form-label" for="">
+							Success Input : 
+						</label>
+						<div class="ui-form-control">
+							<input type="text" class="ui-textfield ui-textfield-system" />
+							<div class="ui-form-help ui-feedback ui-feedback-addon">
+								<div class="ui-feedback-content ui-feedback-success ui-feedback-body">Check success!</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="ui-form-item ui-form-item-error">
+						<label class="ui-form-label" for="">
+							Error Input : 
+						</label>
+						<div class="ui-form-control">
+							<input type="text" class="ui-textfield ui-textfield-system ui-textfield-error" />
+							<div class="ui-form-help ui-feedback ui-feedback-addon">
+								<div class="ui-feedback-content ui-feedback-error ui-feedback-body">Check error!</div>
+							</div>
+						</div>
+					</div>
+
+				</fieldset>
+
+				<div class="ui-form-action">
+					<!-- Attention: Do not use input[type="submit"] as submit button -->
+					<button type="submit" class="ui-button ui-button-primary ui-button-medium">Save Changes</button>
+					<button class="ui-button ui-button-normal ui-button-medium">Cancel</button>
+				</div>
+
+			</form>
+
+		</div>
+
+	</div>
+
+	<div class="col-sub">
+		<h2>高级表单布局</h2>
+		<article>
+			本部分演示了一些较为复杂的表单布局结构和各种应用情况
+		</article>
+	</div>
+
+</div>
+<!-- advanced form example } -->
+
+<!-- { grid horizontal form example -->
+
+
+
+</div>
+
+
+</body>
+</html>

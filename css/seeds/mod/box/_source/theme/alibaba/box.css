@@ -1,0 +1,197 @@
+/*
+ *@name : theme-alibaba-box
+ *@description : alibaba平台的内容区块的视觉定义.
+ *@require : box-base
+ *@author : zhenyu.zhaozy@gmail.com
+ *@version : 1.0
+ *@modifyTime : 2012-07-27
+ *@structure : 
+ *            	<div class="ui-box ui-box-normal">
+ *           	 	<h3 class="ui-box-title">
+ *           		 	Title
+ *           		  	<span class="ui-box-sub-title">sub title here</span>
+ *           		   	<a class="action" href="#" >[action]</a>
+ *           	    </h3>
+ *           	    <div class="ui-box-body">
+ *           		   <p class="split">text text text</p>
+ *           		   <p>text text text text</p>
+ *           	    </div>
+ *               </div>
+ */
+
+
+/*
+ * primary形态
+ */
+.ui-box-primary {
+	border : 3px solid #b3daff;
+}
+
+.ui-box-primary .ui-box-title {
+
+}
+
+.ui-box-primary .action {
+ 	top : 15px;
+	right : 15px;
+}
+
+.ui-box-primary .action:hover {
+	color : #f90;
+}
+
+.ui-box-primary .ui-box-body {
+
+}
+
+.ui-box-primary .external, 
+.ui-box-primary .external:visited {
+	color : #06c;
+}
+
+
+
+
+/*
+ * normal形态
+ */
+
+.ui-box-normal {
+	
+}
+
+.ui-box-normal .ui-box-title {
+	border-bottom : 2px solid #1996e6;
+}
+
+.ui-box-normal .action {
+	top : 2px;
+}
+
+.ui-box-normal .action:hover {
+	color : #f90;
+}
+
+.ui-box-normal .ui-box-body {
+
+}
+
+.ui-box-normal .external, 
+.ui-box-normal .external:visited {
+	color : #06c;
+}
+
+/*
+ *  system形态
+ */
+
+.ui-box-system {
+	border : 1px solid #dae6f8;
+}
+
+.ui-box-system .ui-box-title {
+ 	height : 12px;
+ 	padding : 10px;
+
+	font-size : 12px;
+	line-height : 12px;
+	font-weight : bold;
+
+	background-color : #ebf3ff;
+	border : none;
+}
+
+.ui-box-system .action {
+	top : 10px;
+	right : 10px;
+}
+
+.ui-box-system .action:hover {
+	color : #f90;
+}
+
+.ui-box-system .ui-box-body .push-button-wrap .internal, 
+.ui-box-system .ui-box-body .push-button-wrap .internal:visited {
+	border : 1px solid #dae6f8;
+	border-top : none;
+}
+.ui-box-system .ui-box-body .push-button-wrap .internal:hover {
+	background-color: #EBF3FF;
+}
+.ui-box-system .external, 
+.ui-box-system .external:visited {
+	color : #06c;
+}
+
+
+/*
+ * primary system形态
+ */
+
+.ui-box-primary.ui-box-system {
+	border : 1px solid #f1d38b;
+}
+
+.ui-box-primary.ui-box-system .ui-box-title {
+ 	height : 12px;
+ 	padding : 10px;
+
+ 	line-height : 12px;
+	font-size : 12px;
+	font-weight : bold;
+	
+	background-color : #fffae0;
+	border : none;
+}
+
+.ui-box-primary-system .action {
+ 	top : 10px;
+	right : 10px;
+}
+
+.ui-box-primary.ui-box-system .action:hover {
+	color : #f90;
+}
+
+.ui-box-primary-system .ui-box-body {
+
+}
+
+.ui-box-primary.ui-box-system .ui-box-body .push-button-wrap .internal, 
+.ui-box-primary.ui-box-system .ui-box-body .push-button-wrap .internal:visited {
+	border : 1px solid #f1d38b;
+	border-top : none;
+}
+.ui-box-primary.ui-box-system .ui-box-body .push-button-wrap .internal:hover {
+	background-color: #FFFAE0;
+}
+.ui-box-primary.ui-box-system .external, 
+.ui-box-primary.ui-box-system .external:visited {
+	color : #06c;
+}
+/* 
+ * wrap形态
+ */
+
+.ui-box-wrap {
+	
+}
+
+.ui-box-wrap .ui-box-title {
+	border-bottom : 2px solid #1996e6;
+	margin-bottom : -1px;
+	position : relative;
+	z-index : 2;
+}
+
+.ui-box-wrap .ui-box-body{
+	border : 1px solid #dddddd;
+}
+
+.ui-box-wrap .action {
+
+}
+
+.ui-box-wrap .action:hover {
+	color : #f90;
+}

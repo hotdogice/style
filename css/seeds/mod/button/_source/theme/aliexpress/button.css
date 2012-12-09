@@ -1,0 +1,22 @@
+/*
+ *@name : theme-aliexpress-button
+ *@description : aliexpress平台的按钮(包括使用button和input[type=button | submit])的视觉定义.
+ *@require : button-base
+ *@author : zhenyu.zhaozy@gmail.com
+ *@version : 1.0
+ *@modifyTime : 2012-07-27
+ *@structure : 
+ *           <body class="aliexpress">
+ *           	...
+ *            	<button class="ui-button ui-button-primary ui-button-disabled">Button</button>
+ *             	<input type="button" class="ui-button ui-button-primary ui-button-disabled" value="Button" />
+ *           </body>
+ */
+
+/*
+ * 在需要主题的场景下, 在引用mod的页面body中申明"aliexpress"的class, 标识使用aliexpress的特有主题(theme)
+ * 在该文件中 ".aliexpress"作为所有申明的命名空间(namespace). 其后的选择器申明保持和base中申明的一致。
+ * 例如:
+ * .aliexpress .ui-button-normal {...}
+ * .aliexpress .ui-button-normal:hover {...}
+ */

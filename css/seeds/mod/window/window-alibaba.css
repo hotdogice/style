@@ -1,0 +1,6 @@
+.ui-window{position:fixed;_position:absolute}.ui-window-normal{overflow:hidden}.ui-window-normal .ui-window-close,.ui-window-normal .ui-window-close:visited{position:absolute;padding-top:17px;height:0;width:17px;overflow:hidden}.ui-window-close{top:6px;right:6px}.ui-window-title{height:27px;padding-top:10px;margin-bottom:0;text-indent:15px;font:700 16px/26px Arial;color:#333;background:#FFF}.ui-window-bd{padding:15px;background:#FFF}.ui-window-btn{padding-top:10px;margin-bottom:10px}.ui-window-btn input{margin:0 5px}.ui-window-normal{opacity:0;-moz-transform:scale(1.2);-moz-box-shadow:2px 5px 8px #ddd;-webkit-box-shadow:2px 5px 8px #ddd;box-shadow:2px 5px 8px #ddd}.ui-window-transition{opacity:1;-moz-transform:scale(1);-moz-transition:opacity,-moz-transform .15s ease-in-out 0s}#ui-window-mask{position:fixed;_position:absolute;top:0;left:0;background:#eee}.ui-window-normal .widthfix{width:400px}.ui-window-normal .heightfix{height:100px;margin:0 0 0 15px;padding:15px 15px 15px 0;overflow-y:auto}
+
+.ui-window-normal{border:1px solid #ccc}.ui-window-normal .ui-window-close,.ui-window-normal .ui-window-close:visited{background:url(http://img.alibaba.com/simg/sprites/app/ui-window-close.png) no-repeat 0 -2px}.ui-window-normal .ui-window-close:hover{background-position:0 -51px}.ui-window-title h3{background:#f5f5f5}.ui-window-btn{text-align:left}
+
+
+
