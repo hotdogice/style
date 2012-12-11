@@ -1,5 +1,4 @@
 /* #require "../sea-modules/seajs/1.3.1/sea.js" */
 /* #require "../sea-modules/seajs/1.3.1/plugin-i18n.js" */
-/* #require "../sea-modules/gallery/jquery/1.8.2/jquery.js" */
 /* #require "_srouce/global-config.js" */
 /* #require "_srouce/html5.js" */

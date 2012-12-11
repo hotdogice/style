@@ -3,8 +3,9 @@
  *@description : 信息反馈的视觉定义. 这个模块是bounding box 和 content box 分离的典型实例. bounding box定义模块名和模块状态, content box定义模块类型.
  *@require : core
  *@author : jeffrey.xuj, zhenyu.zhaozy 
- *@version : 1.0
+ *@version : 1.1
  *@modifyInfo : 
+ *				2012-12-10 : 去除ui-form-entry定义, 简化控件配合方式;
  *				2012-09-13 : 稳定抽象方式和与其他mod配合的方式;
  *@structure : 
  *           
@@ -20,11 +21,11 @@
 				<ui-label : [ block , inline ]>
 					<ui-form-required>
 				(<ui-form-entry>)
-					<ui-textfield>
-					<ui-dropdown>
-					<ui-checkbox>
-					<ui-button>
-					<ui-radio>
+				<ui-textfield>
+				<ui-dropdown>
+				<ui-checkbox>
+				<ui-button>
+				<ui-radio>
 					…
 					<ui-form-help>
 					<ui-feedback>
@@ -115,7 +116,6 @@ h1.ui-form-title {
 .ui-form-item {
 	margin-bottom : 20px;
 	padding : 0 30px;
-	font-size : 0; /* 解决inline-block额外边距问题 */
 }
 
 .ui-form-item:before {
@@ -165,24 +165,45 @@ h1.ui-form-title {
 }
 
 /* 表单控件组 */
-.ui-form-control {
+.ui-form .ui-form-control {
 	padding-top : 4px;
-	font-size : 0; /* 解决inline-block额外边距问题 */
 }
 
-/* 表单项帮助信息 */
-.ui-form-help {
-	color: #aaa;
-	margin: 0;
-	margin-top: 2px;
+.ui-form .ui-form-control, 
+.ui-form .ui-form-item, 
+.ui-form .ui-form-entry {
+	letter-spacing : -4px;
+	*letter-spacing : normal;
+	word-spacing : -6px;
 }
 
-/* 表单项 + 表单帮助信息的最小单元 */
-.ui-form-entry {
+/* 解决inline-block额外边距问题 */
+.ui-form-control *, 
+.ui-form-item * {
+	letter-spacing : normal;
+	word-spacing : normal;
+}
+
+/* 控件集的最小单元, 一般情况下不推荐使用entry来做容器, 只有出现一些fake或者customize的控件需要inline的时候使用 */
+.ui-form .ui-form-entry {
 	display : inline-block;
 	*display : inline;
 	*zoom : 1;
 	position : relative;
+}
+
+/* 表单项帮助信息 */
+.ui-form-help {	
+	margin: 0;
+	color: #aaa;
+	margin: 0;
+	margin-top : 2px;
+}
+
+.ui-form-entry .ui-form-help {
+	position : relative;
+	left: 3px;
+	margin-bottom : 5px;
 }
 
 /* 平均分布式表单项单元结构 */
@@ -233,9 +254,11 @@ h1.ui-form-title {
  */
 
 .ui-form-horizontal .ui-form-label {
+	display: block;
 	float : left;
 	padding : 4px 0;
 	padding-right : 10px;
+	margin-bottom : 0;
 	width : 200px;
 	height : 18px;
 
@@ -255,10 +278,11 @@ h1.ui-form-title {
 }
 
 .ui-form-horizontal .ui-form-control {
-	zoom : 1;
 	display : block;
+	zoom : 1;
 	margin-left : 210px;
-	*margin-left : 0;
+	*margin-left : 0px;
+	
 }
 
 /*
@@ -288,7 +312,8 @@ h1.ui-form-title {
 }
 
 .ui-form-grouping .ui-form-control {
-	margin-left: 195px;
+	margin-left : 195px;
+	*margin-left : 0; /* hacks for ie6 */
 }
 
 .ui-form-grouping .ui-form-action {
@@ -316,19 +341,16 @@ h1.ui-form-title {
 	min-height : 18px;
 	margin-right : 5px;
 	margin-bottom : 0;
-	margin-left : -18px;
+	padding : 0;
+/*	margin-left : -18px;
 	padding : 0;
 	padding-left : 18px;
-	-padding-left : 15px;
+	-padding-left : 15px;*/
+	padding : 2px 0;
 	color : #000;
 	text-align : left;
 	font-weight : normal;
-	font-size : 12px; /* 解决inline-block问题时将外围容器设置成font-size:0, 各控件需要重置 */
 	width : auto;
-}
-
-.ui-form .ui-filefield {
-	font-size : 12px;
 }
 
 .ui-form .ui-label-separate { /* 预留 */
@@ -353,13 +375,6 @@ h1.ui-form-title {
 	*zoom : 1;
 }
 
-.ui-form-grouping > .ui-box-system {
-	border-top : none;
-}
-
-.ui-form-grouping > .ui-box-system.first-child {
-	border-top : 1px solid #dae6f8;
-}
 
 /*
  * textfield & dropdown 的长度复写.
